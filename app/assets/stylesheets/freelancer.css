@@ -13,27 +13,27 @@ p {
     text-align: center;
 }
 
-fa{
+fa {
     text-align: left;
 }
-.menu_description{
+.menu_description {
     text-align: justify;
 }
-#current_plan{
+#current_plan {
     color: #fff;
 }
 
-.edit_button{
+.edit_button {
     color: #fff;
     float: right;
 }
-.edit_button:hover{
+.edit_button:hover {
         color: #fff;
         cursor: pointer;
 }
 
 
-h4.account_profile{
+h4.account_profile {
     text-align: left;
 }
 
