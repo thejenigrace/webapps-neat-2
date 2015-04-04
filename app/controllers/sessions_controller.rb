@@ -3,7 +3,7 @@ class SessionsController < ApplicationController
 
   def index
     if session[:user_id]
-      redirect_to root_path
+      redirect_to home_path
     end
   end
 
@@ -11,7 +11,7 @@ class SessionsController < ApplicationController
     user = User.authenticate(params[:email], params[:password])
     if user
       session[:user_id] = user.id
-      redirect_to root_path
+      redirect_to home_path
     else
       redirect_to action: :index
     end

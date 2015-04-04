@@ -47,8 +47,12 @@
             <a href="#" class = "dropdown-toggle" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true">
               <i class = 'fa fa-user'></i>  &nbsp;diet_guy@gmail.com <span class="caret"></span>
               <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
-                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">
-                  <i class = 'fa fa-sign-out'></i> &nbsp;Log Out</a></li>
+                <li role="presentation">
+                  <!--<a role="menuitem" tabindex="-1" href="#">-->
+                    <!--<i class = 'fa fa-sign-out' onclick = "accountDropDown.submit();"></i> &nbsp;Log Out-->
+                  <!--</a>-->
+                  <%= link_to 'Log Out', sessions_logout_path, role: 'menuitem', tabindex: '-1' %>
+                </li>
               </ul>
             </a>
           </li>

@@ -2,8 +2,8 @@ Rails.application.routes.draw do
   root 'sessions#index'
 
   # sessions_controller
-  get  'sessions/login'
   post 'sessions/login'
+  get  'sessions/logout'
   post 'sessions/logout'
   post 'sessions/register'
 
