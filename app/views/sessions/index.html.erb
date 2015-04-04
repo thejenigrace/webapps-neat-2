@@ -547,13 +547,17 @@
         <%= form_tag(sessions_register_path, method: :post) do %>
           <div class="modal-body">
             <br>
-            <input class='form-control' type='text' name='name' placeholder='Name' />
+            <!--<input class='form-control' type='text' name='name' placeholder='Name' />-->
+            <%= text_field_tag('name', nil, class: 'form-control', placeholder: 'Name') %>
             <br>
-            <input class='form-control' type='text' name='email' placeholder='Email Address' />
+            <!--<input class='form-control' type='text' name='email' placeholder='Email Address' />-->
+            <%= text_field_tag('email', nil, class: 'form-control', placeholder: 'Email Address') %>
             <br>
-            <input class='form-control' type='password' name='password' placeholder='Password' />
+            <!--<input class='form-control' type='password' name='password' placeholder='Password' />-->
+            <%= password_field_tag('password', nil, class: 'form-control', placeholder: 'Password') %>
             <br>
-            <input class='form-control' type='password' name='password_confirm' placeholder='Confirm Password' />
+            <!--<input class='form-control' type='password' name='password_confirm' placeholder='Confirm Password' />-->
+            <%= password_field_tag('password_confirm', nil, class: 'form-control', placeholder: 'Cofirm Password') %>
             <br>
           </div>
           <div class="modal-footer">

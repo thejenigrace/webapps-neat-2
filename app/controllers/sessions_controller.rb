@@ -23,12 +23,11 @@ class SessionsController < ApplicationController
   end
 
   def register
-    if (params[:name].present? && params[:username].present? && params[:password].present? && params[:password_confirm].present?)
+    # if (params[:name].present? && params[:username].present? && params[:password].present? && params[:password_confirm].present?)
       user = User.create_user(params[:name], params[:email], params[:password], params[:password_confirm])
-      puts 'create_user'
-    end
+      # console.log('lol')
+    # end
     if user
-      session[:user_id] = user.id
       redirect_to root_path
     else
       redirect_to action: :index
