@@ -23,7 +23,10 @@ class SessionsController < ApplicationController
   end
 
   def register
-    user = User.create_user(params[:name], params[:email], params[:password], params[:password_confirm])
+    if (params[:name].present? && params[:username].present? && params[:password].present? && params[:password_confirm].present?)
+      user = User.create_user(params[:name], params[:email], params[:password], params[:password_confirm])
+      puts 'create_user'
+    end
     if user
       session[:user_id] = user.id
       redirect_to root_path

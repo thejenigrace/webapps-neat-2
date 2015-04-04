@@ -1,10 +1,12 @@
 Rails.application.routes.draw do
   root 'sessions#index'
 
+  # sessions_controller
   post 'sessions/login'
-  get  'sessions/logout'
+  post 'sessions/logout'
   post 'sessions/register'
 
+  # users_controller
   get  'home' => 'users#index'
   post 'users/index'
 
