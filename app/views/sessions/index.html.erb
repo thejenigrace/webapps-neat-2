@@ -11,557 +11,559 @@
 </head>
 
 <body id="page-top" class="index">
-<!-- Navigation -->
-<nav class="navbar navbar-default navbar-fixed-top">
-  <div class="container">
-    <!-- Brand and toggle get grouped for better mobile display -->
-    <div class="navbar-header page-scroll">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="#page-top">neat</a>
-    </div>
+  <!-- Navigation -->
+  <nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header page-scroll">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#page-top">neat</a>
+      </div>
 
-    <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <ul class="nav navbar-nav navbar-right">
-        <li class="hidden">
-          <a href="#page-top"></a>
-        </li>
-        <li class="page-scroll">
-          <a href="#menuplan">Menu Plan</a>
-        </li>
-        <li class="page-scroll">
-          <a href="#about">About</a>
-        </li>
-        <!-- <li class="page-scroll">
-          <a href="#contact">Register</a>
-        </li> -->
-        <li class="page-scroll">
-          <a href="#login">Log In</a>
-        </li>
-        <li class="page-scroll">
-          <a href="#" class="portfolio-link" data-toggle="modal" data-target="#portfolioModalSignUp">Sign Up</a>
-        </li>
-      </ul>
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav navbar-right">
+          <li class="hidden">
+            <a href="#page-top"></a>
+          </li>
+          <li class="page-scroll">
+            <a href="#menuplan">Menu Plan</a>
+          </li>
+          <li class="page-scroll">
+            <a href="#about">About</a>
+          </li>
+          <!-- <li class="page-scroll">
+            <a href="#contact">Register</a>
+          </li> -->
+          <li class="page-scroll">
+            <a href="#login">Log In</a>
+          </li>
+          <li class="page-scroll">
+            <a href="#" class="portfolio-link" data-toggle="modal" data-target="#portfolioModalSignUp">Sign Up</a>
+          </li>
+        </ul>
+      </div>
+      <!-- /.navbar-collapse -->
     </div>
-    <!-- /.navbar-collapse -->
+    <!-- /.container-fluid -->
+  </nav>
+
+  <!-- Header -->
+  <header>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <!--<img class="img-responsive" src="/images/profile.png" alt="">-->
+          <%= image_tag('profile.png', class: 'img-responsive') %>
+          <div class="intro-text">
+            <!--                        <span class="name">Neat</span>-->
+            <!--                        <hr class="star-light">-->
+            <span class="skills">Eat Real Food, Feel Real Good.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Menu Plan Grid Section -->
+  <section id="menuplan">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 text-center">
+          <h2>Menu Plan</h2>
+          <hr class="star-primary">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-4 portfolio-item">
+          <a href="#" class="portfolio-link" data-toggle="modal" data-target="#portfolioModal1">
+            <div class="caption">
+              <div class="caption-content">
+                <i class="fa fa-search-plus fa-3x"></i>
+              </div>
+            </div>
+            <!--<img src="img/menu plan/1.jpg" class="img-responsive" alt="">-->
+            <%= image_tag('1.jpg', class: 'img-responsive') %>
+            <div class="col-sm-14 portfolio-item text-center">
+              <br>
+              <p><strong>Monday Plan</strong></p>
+              <p>Lorem ipsum dolor sit amet, has eu copiosae erroribus.</p>
+              <p>Price Range: P 1000-1500</p>
+            </div>
+          </a>
+        </div>
+        <div class="col-sm-4 portfolio-item">
+          <a href="#portfolioModal2" class="portfolio-link" data-toggle="modal">
+            <div class="caption">
+              <div class="caption-content">
+                <i class="fa fa-search-plus fa-3x"></i>
+              </div>
+            </div>
+            <!--<img src="img/menu plan/2.jpg" class="img-responsive" alt="">-->
+            <%= image_tag('2.jpg', class: 'img-responsive') %>
+            <div class="col-sm-14 portfolio-item text-center">
+              <br>
+              <p><strong>Tuesday Plan</strong></p>
+              <p>Lorem ipsum dolor sit amet, has eu copiosae erroribus.</p>
+              <p>Price Range: P 1000-1500</p>
+            </div>
+          </a>
+        </div>
+        <div class="col-sm-4 portfolio-item">
+          <a href="#portfolioModal3" class="portfolio-link" data-toggle="modal">
+            <div class="caption">
+              <div class="caption-content">
+                <i class="fa fa-search-plus fa-3x"></i>
+              </div>
+            </div>
+            <!--<img src="img/menu plan/3.jpg" class="img-responsive" alt="">-->
+            <%= image_tag('3.jpg', class: 'img-responsive') %>
+            <div class="col-sm-14 portfolio-item text-center">
+              <br>
+              <p><strong>Wednesday Plan</strong></p>
+              <p>Lorem ipsum dolor sit amet, has eu copiosae erroribus.</p>
+              <p>Price Range: P 1000-1500</p>
+            </div>
+          </a>
+        </div>
+        <div class="col-sm-4 portfolio-item">
+          <a href="#portfolioModal4" class="portfolio-link" data-toggle="modal">
+            <div class="caption">
+              <div class="caption-content">
+                <i class="fa fa-search-plus fa-3x"></i>
+              </div>
+            </div>
+            <!--<img src="img/menu plan/4.jpg" class="img-responsive" alt="">-->
+            <%= image_tag('4.jpg', class: 'img-responsive') %>
+            <div class="col-sm-14 portfolio-item text-center">
+              <br>
+              <p><strong>Thursday Plan</strong></p>
+              <p>Lorem ipsum dolor sit amet, has eu copiosae erroribus.</p>
+              <p>Price Range: P 1000-1500</p>
+            </div>
+          </a>
+        </div>
+        <div class="col-sm-4 portfolio-item">
+          <a href="#portfolioModal5" class="portfolio-link" data-toggle="modal">
+            <div class="caption">
+              <div class="caption-content">
+                <i class="fa fa-search-plus fa-3x"></i>
+              </div>
+            </div>
+            <!--<img src="img/menu plan/5.jpg" class="img-responsive" alt="">-->
+            <%= image_tag('5.jpg', class: 'img-responsive') %>
+            <div class="col-sm-14 portfolio-item text-center">
+              <br>
+              <p><strong>Friday Plan</strong></p>
+              <p>Lorem ipsum dolor sit amet, has eu copiosae erroribus.</p>
+              <p>Price Range: P 1000-1500</p>
+            </div>
+          </a>
+        </div>
+        <div class="col-sm-4 portfolio-item">
+          <a href="#portfolioModal6" class="portfolio-link" data-toggle="modal">
+            <div class="caption">
+              <div class="caption-content">
+                <i class="fa fa-search-plus fa-3x"></i>
+              </div>
+            </div>
+            <!--<img src="img/menu plan/6.jpg" class="img-responsive" alt="">-->
+            <%= image_tag('6.jpg', class: 'img-responsive') %>
+            <div class="col-sm-14 portfolio-item text-center">
+              <br>
+              <p><strong>Weekend Plan</strong></p>
+              <p>Lorem ipsum dolor sit amet, has eu copiosae erroribus.</p>
+              <p>Price Range: P 1000-1500</p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="success" id="about">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 text-center">
+          <h2>About</h2>
+          <hr class="star-light">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-4 col-lg-offset-2">
+          <p class = "menu_description">Lorem ipsum dolor sit amet, ullum nemore indoctum cum ne, per eu eius sententiae delicatissimi, recteque laboramus delicatissimi mel ex. Cum case evertitur cu, mel summo eleifend salutatus et.</p>
+        </div>
+        <div class="col-lg-4">
+          <p class="menu_description">Malis aeterno vituperata sea no. Partem molestie constituto vel ad, eum quot nominavi instructior ei. Falli legendos vel no. Dolorum cotidieque quo ex, ne malis ridens quo. Nec saepe suscipit cu, ei eos quodsi bonorum intellegat.</p>
+        </div>
+        <!--
+                      <div class="col-lg-8 col-lg-offset-2 text-center">
+                          <a href="#" class="btn btn-lg btn-outline">
+                              <i class="fa fa-download"></i> Download Theme
+                          </a>
+                      </div>
+      -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Login Section -->
+  <section id="login">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 text-center">
+          <h2>Log In</h2>
+          <hr class="star-primary">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-8 col-lg-offset-2">
+          <!-- To configure the contact form email address, go to mail/contact_me.php and update the email address in the PHP file on line 19. -->
+          <!-- The form should work on most web servers, but if the form is not working you may need to configure your web server differently. -->
+          <form name="sentMessage" id="contactForm" method ="get" action= "account-dashboard.html" novalidate>
+            <div class="row control-group">
+              <div class="form-group col-xs-12 floating-label-form-group controls">
+                <label>Email Address</label>
+                <input type="email" class="form-control" placeholder="Email Address" id="email" required data-validation-required-message="Please enter your email address.">
+                <p class="help-block text-danger"></p>
+              </div>
+            </div>
+            <div class="row control-group">
+              <div class="form-group col-xs-12 floating-label-form-group controls">
+                <label>Password</label>
+                <input type="text" class="form-control" placeholder="Password" id="password" required data-validation-required-message="Please enter your password.">
+                <p class="help-block text-danger"></p>
+              </div>
+            </div>
+            <br><br>
+            <div id="success"></div>
+            <div class="row" align="center">
+              <div class="form-group col-xs-12">
+                <button type="submit" class="btn btn-success">Log In</button>
+                <br><br>
+                <a href="#portfolioModalSignUp" class="portfolio-link" data-toggle="modal">Don't have an account yet?</a>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="text-center">
+    <div class="footer-above">
+      <div class="container">
+        <div class="row">
+          <div class="footer-col col-md-6">
+            <h3>Location</h3>
+            <p>2401 Taft Avenue<br>Manila, PH 1004</p>
+          </div>
+          <div class="footer-col col-md-6">
+            <h3>Around the Web</h3>
+            <ul class="list-inline">
+              <li>
+                <a href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-facebook"></i></a>
+              </li>
+              <li>
+                <a href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-google-plus"></i></a>
+              </li>
+              <li>
+                <a href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-twitter"></i></a>
+              </li>
+              <li>
+                <a href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-linkedin"></i></a>
+              </li>
+              <li>
+                <a href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-dribbble"></i></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-below">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+            Copyright &copy; Neat 2015
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scroll to Top Button (Only visible on small and extra-small screen sizes) -->
+  <div class="scroll-top page-scroll visible-xs visble-sm">
+    <a class="btn btn-primary" href="#page-top">
+      <i class="fa fa-chevron-up"></i>
+    </a>
   </div>
-  <!-- /.container-fluid -->
-</nav>
 
-<!-- Header -->
-<header>
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-12">
-        <!--<img class="img-responsive" src="/images/profile.png" alt="">-->
-        <%= image_tag('profile.png', class: 'img-responsive') %>
-        <div class="intro-text">
-          <!--                        <span class="name">Neat</span>-->
-          <!--                        <hr class="star-light">-->
-          <span class="skills">Eat Real Food, Feel Real Good.</span>
+  <!-- Portfolio Modals -->
+  <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-content">
+      <div class="close-modal" data-dismiss="modal">
+        <div class="lr">
+          <div class="rl">
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-lg-offset-2">
+            <div class="modal-body">
+              <h2>Monday Plan</h2>
+              <hr class="star-primary">
+              <!--<img src="img/menu plan/1.jpg" class="img-responsive img-centered" alt="">-->
+              <%= image_tag('1.jpg', class: 'img-responsive img-centered') %>
+              <p>Lorem ipsum dolor sit amet, ullum nemore indoctum cum ne, per eu eius sententiae delicatissimi, recteque laboramus delicatissimi mel ex. Cum case evertitur cu, mel summo eleifend salutatus et. Malis aeterno vituperata sea no. Partem molestie constituto vel ad, eum quot nominavi instructior ei. Falli legendos vel no. Dolorum cotidieque quo ex, ne malis ridens quo.</p>
+              <ul class="list-inline item-details">
+                <li>Price:
+                  <strong>P 1000-1500
+                  </strong>
+                </li>
+                <li>Date:
+                  <strong>March 2014
+                  </strong>
+                </li>
+                <li>Service:
+                  <strong>Shredding Diet
+                  </strong>
+                </li>
+              </ul>
+              <!--                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>-->
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </div>
-</header>
-
-<!-- Menu Plan Grid Section -->
-<section id="menuplan">
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-12 text-center">
-        <h2>Menu Plan</h2>
-        <hr class="star-primary">
+  <div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-content">
+      <div class="close-modal" data-dismiss="modal">
+        <div class="lr">
+          <div class="rl">
+          </div>
+        </div>
       </div>
-    </div>
-    <div class="row">
-      <div class="col-sm-4 portfolio-item">
-        <a href="#" class="portfolio-link" data-toggle="modal" data-target="#portfolioModal1">
-          <div class="caption">
-            <div class="caption-content">
-              <i class="fa fa-search-plus fa-3x"></i>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-lg-offset-2">
+            <div class="modal-body">
+              <h2>Tuesday Plan</h2>
+              <hr class="star-primary">
+              <!--<img src="img/menu plan/2.jpg" class="img-responsive img-centered" alt="">-->
+              <%= image_tag('2.jpg', class: 'img-responsive img-centered') %>
+              <p>Lorem ipsum dolor sit amet, ullum nemore indoctum cum ne, per eu eius sententiae delicatissimi, recteque laboramus delicatissimi mel ex. Cum case evertitur cu, mel summo eleifend salutatus et. Malis aeterno vituperata sea no. Partem molestie constituto vel ad, eum quot nominavi instructior ei. Falli legendos vel no. Dolorum cotidieque quo ex, ne malis ridens quo.</p>
+              <ul class="list-inline item-details">
+                <li>Price:
+                  <strong>P 1000-1500
+                  </strong>
+                </li>
+                <li>Date:
+                  <strong>March 2014
+                  </strong>
+                </li>
+                <li>Service:
+                  <strong>Shredding Diet
+                  </strong>
+                </li>
+              </ul>
+              <!--                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>-->
             </div>
           </div>
-          <!--<img src="img/menu plan/1.jpg" class="img-responsive" alt="">-->
-          <%= image_tag('1.jpg', class: 'img-responsive') %>
-          <div class="col-sm-14 portfolio-item text-center">
-            <br>
-            <p><strong>Monday Plan</strong></p>
-            <p>Lorem ipsum dolor sit amet, has eu copiosae erroribus.</p>
-            <p>Price Range: P 1000-1500</p>
-          </div>
-        </a>
-      </div>
-      <div class="col-sm-4 portfolio-item">
-        <a href="#portfolioModal2" class="portfolio-link" data-toggle="modal">
-          <div class="caption">
-            <div class="caption-content">
-              <i class="fa fa-search-plus fa-3x"></i>
-            </div>
-          </div>
-          <!--<img src="img/menu plan/2.jpg" class="img-responsive" alt="">-->
-          <%= image_tag('2.jpg', class: 'img-responsive') %>
-          <div class="col-sm-14 portfolio-item text-center">
-            <br>
-            <p><strong>Tuesday Plan</strong></p>
-            <p>Lorem ipsum dolor sit amet, has eu copiosae erroribus.</p>
-            <p>Price Range: P 1000-1500</p>
-          </div>
-        </a>
-      </div>
-      <div class="col-sm-4 portfolio-item">
-        <a href="#portfolioModal3" class="portfolio-link" data-toggle="modal">
-          <div class="caption">
-            <div class="caption-content">
-              <i class="fa fa-search-plus fa-3x"></i>
-            </div>
-          </div>
-          <!--<img src="img/menu plan/3.jpg" class="img-responsive" alt="">-->
-          <%= image_tag('3.jpg', class: 'img-responsive') %>
-          <div class="col-sm-14 portfolio-item text-center">
-            <br>
-            <p><strong>Wednesday Plan</strong></p>
-            <p>Lorem ipsum dolor sit amet, has eu copiosae erroribus.</p>
-            <p>Price Range: P 1000-1500</p>
-          </div>
-        </a>
-      </div>
-      <div class="col-sm-4 portfolio-item">
-        <a href="#portfolioModal4" class="portfolio-link" data-toggle="modal">
-          <div class="caption">
-            <div class="caption-content">
-              <i class="fa fa-search-plus fa-3x"></i>
-            </div>
-          </div>
-          <!--<img src="img/menu plan/4.jpg" class="img-responsive" alt="">-->
-          <%= image_tag('4.jpg', class: 'img-responsive') %>
-          <div class="col-sm-14 portfolio-item text-center">
-            <br>
-            <p><strong>Thursday Plan</strong></p>
-            <p>Lorem ipsum dolor sit amet, has eu copiosae erroribus.</p>
-            <p>Price Range: P 1000-1500</p>
-          </div>
-        </a>
-      </div>
-      <div class="col-sm-4 portfolio-item">
-        <a href="#portfolioModal5" class="portfolio-link" data-toggle="modal">
-          <div class="caption">
-            <div class="caption-content">
-              <i class="fa fa-search-plus fa-3x"></i>
-            </div>
-          </div>
-          <!--<img src="img/menu plan/5.jpg" class="img-responsive" alt="">-->
-          <%= image_tag('5.jpg', class: 'img-responsive') %>
-          <div class="col-sm-14 portfolio-item text-center">
-            <br>
-            <p><strong>Friday Plan</strong></p>
-            <p>Lorem ipsum dolor sit amet, has eu copiosae erroribus.</p>
-            <p>Price Range: P 1000-1500</p>
-          </div>
-        </a>
-      </div>
-      <div class="col-sm-4 portfolio-item">
-        <a href="#portfolioModal6" class="portfolio-link" data-toggle="modal">
-          <div class="caption">
-            <div class="caption-content">
-              <i class="fa fa-search-plus fa-3x"></i>
-            </div>
-          </div>
-          <!--<img src="img/menu plan/6.jpg" class="img-responsive" alt="">-->
-          <%= image_tag('6.jpg', class: 'img-responsive') %>
-          <div class="col-sm-14 portfolio-item text-center">
-            <br>
-            <p><strong>Weekend Plan</strong></p>
-            <p>Lorem ipsum dolor sit amet, has eu copiosae erroribus.</p>
-            <p>Price Range: P 1000-1500</p>
-          </div>
-        </a>
+        </div>
       </div>
     </div>
   </div>
-</section>
-
-<!-- About Section -->
-<section class="success" id="about">
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-12 text-center">
-        <h2>About</h2>
-        <hr class="star-light">
+  <div class="portfolio-modal modal fade" id="portfolioModal3" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-content">
+      <div class="close-modal" data-dismiss="modal">
+        <div class="lr">
+          <div class="rl">
+          </div>
+        </div>
       </div>
-    </div>
-    <div class="row">
-      <div class="col-lg-4 col-lg-offset-2">
-        <p class = "menu_description">Lorem ipsum dolor sit amet, ullum nemore indoctum cum ne, per eu eius sententiae delicatissimi, recteque laboramus delicatissimi mel ex. Cum case evertitur cu, mel summo eleifend salutatus et.</p>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-lg-offset-2">
+            <div class="modal-body">
+              <h2>Wednesday Plan</h2>
+              <hr class="star-primary">
+              <!--<img src="img/menu plan/3.jpg" class="img-responsive img-centered" alt="">-->
+              <%= image_tag('3.jpg', class: 'img-responsive img-centered') %>
+              <p>Lorem ipsum dolor sit amet, ullum nemore indoctum cum ne, per eu eius sententiae delicatissimi, recteque laboramus delicatissimi mel ex. Cum case evertitur cu, mel summo eleifend salutatus et. Malis aeterno vituperata sea no. Partem molestie constituto vel ad, eum quot nominavi instructior ei. Falli legendos vel no. Dolorum cotidieque quo ex, ne malis ridens quo.</p>
+              <ul class="list-inline item-details">
+                <li>Price:
+                  <strong>P 1000-1500
+                  </strong>
+                </li>
+                <li>Date:
+                  <strong>March 2014
+                  </strong>
+                </li>
+                <li>Service:
+                  <strong>Shredding Diet
+                  </strong>
+                </li>
+              </ul>
+              <!--                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>-->
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="col-lg-4">
-        <p class="menu_description">Malis aeterno vituperata sea no. Partem molestie constituto vel ad, eum quot nominavi instructior ei. Falli legendos vel no. Dolorum cotidieque quo ex, ne malis ridens quo. Nec saepe suscipit cu, ei eos quodsi bonorum intellegat.</p>
-      </div>
-      <!--
-                    <div class="col-lg-8 col-lg-offset-2 text-center">
-                        <a href="#" class="btn btn-lg btn-outline">
-                            <i class="fa fa-download"></i> Download Theme
-                        </a>
-                    </div>
-    -->
     </div>
   </div>
-</section>
-
-<!-- Login Section -->
-<section id="login">
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-12 text-center">
-        <h2>Log In</h2>
-        <hr class="star-primary">
+  <div class="portfolio-modal modal fade" id="portfolioModal4" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-content">
+      <div class="close-modal" data-dismiss="modal">
+        <div class="lr">
+          <div class="rl">
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-lg-offset-2">
+            <div class="modal-body">
+              <h2>Thursday Plan</h2>
+              <hr class="star-primary">
+              <!--<img src="img/menu plan/4.jpg" class="img-responsive img-centered" alt="">-->
+              <%= image_tag('4.jpg', class: 'img-responsive img-centered') %>
+              <p>Lorem ipsum dolor sit amet, ullum nemore indoctum cum ne, per eu eius sententiae delicatissimi, recteque laboramus delicatissimi mel ex. Cum case evertitur cu, mel summo eleifend salutatus et. Malis aeterno vituperata sea no. Partem molestie constituto vel ad, eum quot nominavi instructior ei. Falli legendos vel no. Dolorum cotidieque quo ex, ne malis ridens quo.</p>
+              <ul class="list-inline item-details">
+                <li>Price:
+                  <strong>P 1000-1500
+                  </strong>
+                </li>
+                <li>Date:
+                  <strong>March 2014
+                  </strong>
+                </li>
+                <li>Service:
+                  <strong>Shredding Diet
+                  </strong>
+                </li>
+              </ul>
+              <!--                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>-->
+            </div>
+          </div>
+        </div>
       </div>
     </div>
-    <div class="row">
-      <div class="col-lg-8 col-lg-offset-2">
-        <!-- To configure the contact form email address, go to mail/contact_me.php and update the email address in the PHP file on line 19. -->
-        <!-- The form should work on most web servers, but if the form is not working you may need to configure your web server differently. -->
-        <form name="sentMessage" id="contactForm" method ="get" action= "account-dashboard.html" novalidate>
-          <div class="row control-group">
-            <div class="form-group col-xs-12 floating-label-form-group controls">
-              <label>Email Address</label>
-              <input type="email" class="form-control" placeholder="Email Address" id="email" required data-validation-required-message="Please enter your email address.">
-              <p class="help-block text-danger"></p>
+  </div>
+  <div class="portfolio-modal modal fade" id="portfolioModal5" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-content">
+      <div class="close-modal" data-dismiss="modal">
+        <div class="lr">
+          <div class="rl">
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-lg-offset-2">
+            <div class="modal-body">
+              <h2>Friday Plan</h2>
+              <hr class="star-primary">
+              <!--<img src="img/menu plan/5.jpg" class="img-responsive img-centered" alt="">-->
+              <%= image_tag('5.jpg', class: 'img-responsive img-centered') %>
+              <p>Lorem ipsum dolor sit amet, ullum nemore indoctum cum ne, per eu eius sententiae delicatissimi, recteque laboramus delicatissimi mel ex. Cum case evertitur cu, mel summo eleifend salutatus et. Malis aeterno vituperata sea no. Partem molestie constituto vel ad, eum quot nominavi instructior ei. Falli legendos vel no. Dolorum cotidieque quo ex, ne malis ridens quo.</p>
+              <ul class="list-inline item-details">
+                <li>Price:
+                  <strong>P 1000-1500
+                  </strong>
+                </li>
+                <li>Date:
+                  <strong>March 2014
+                  </strong>
+                </li>
+                <li>Service:
+                  <strong>Shredding Diet
+                  </strong>
+                </li>
+              </ul>
+              <!--                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>-->
             </div>
           </div>
-          <div class="row control-group">
-            <div class="form-group col-xs-12 floating-label-form-group controls">
-              <label>Password</label>
-              <input type="text" class="form-control" placeholder="Password" id="password" required data-validation-required-message="Please enter your password.">
-              <p class="help-block text-danger"></p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="portfolio-modal modal fade" id="portfolioModal6" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-content">
+      <div class="close-modal" data-dismiss="modal">
+        <div class="lr">
+          <div class="rl">
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-lg-offset-2">
+            <div class="modal-body">
+              <h2>Weekend Plan</h2>
+              <hr class="star-primary">
+              <!--<img src="img/menu plan/6.jpg" class="img-responsive img-centered" alt="">-->
+              <%= image_tag('6.jpg', class: 'img-responsive img-centered') %>
+              <p>Lorem ipsum dolor sit amet, ullum nemore indoctum cum ne, per eu eius sententiae delicatissimi, recteque laboramus delicatissimi mel ex. Cum case evertitur cu, mel summo eleifend salutatus et. Malis aeterno vituperata sea no. Partem molestie constituto vel ad, eum quot nominavi instructior ei. Falli legendos vel no. Dolorum cotidieque quo ex, ne malis ridens quo.</p>
+              <ul class="list-inline item-details">
+                <li>Price:
+                  <strong>P 1000-1500
+                  </strong>
+                </li>
+                <li>Date:
+                  <strong>March 2014
+                  </strong>
+                </li>
+                <li>Service:
+                  <strong>Shredding Diet
+                  </strong>
+                </li>
+              </ul>
+              <!--                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>-->
             </div>
           </div>
-          <br><br>
-          <div id="success"></div>
-          <div class="row" align="center">
-            <div class="form-group col-xs-12">
-              <button type="submit" class="btn btn-success">Log In</button>
-              <br><br>
-              <a href="#portfolioModalSignUp" class="portfolio-link" data-toggle="modal">Don't have an account yet?</a>
-            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Sign Up Modal -->
+  <!--    <div class="portfolio-modal modal fade" id="portfolioModalRegister" tabindex="-1" role="dialog" aria-hidden="true">-->
+  <section class="modal fade" id="portfolioModalSignUp" tabindex="-1" role="dialog">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+          <h4 class="modal-title">You're a step closer to a healthier life...</h4>
+        </div>
+        <form>
+          <div class="modal-body">
+            <br>
+            <input class='form-control' type='text' name='name' placeholder='Name' />
+            <br>
+            <input class='form-control' type='text' name='email' placeholder='Email Address' />
+            <br>
+            <input class='form-control' type='password' name='password' placeholder='Password' />
+            <br>
+            <input class='form-control' type='password' name='cpassword' placeholder='Confirm Password' />
+            <br>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+            <button type="submit" class="btn btn-success" data-dismiss="modal">Create My Account</button>
           </div>
         </form>
       </div>
     </div>
-  </div>
-</section>
-
-<!-- Footer -->
-<footer class="text-center">
-  <div class="footer-above">
-    <div class="container">
-      <div class="row">
-        <div class="footer-col col-md-6">
-          <h3>Location</h3>
-          <p>2401 Taft Avenue<br>Manila, PH 1004</p>
-        </div>
-        <div class="footer-col col-md-6">
-          <h3>Around the Web</h3>
-          <ul class="list-inline">
-            <li>
-              <a href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-facebook"></i></a>
-            </li>
-            <li>
-              <a href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-google-plus"></i></a>
-            </li>
-            <li>
-              <a href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-twitter"></i></a>
-            </li>
-            <li>
-              <a href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-linkedin"></i></a>
-            </li>
-            <li>
-              <a href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-dribbble"></i></a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="footer-below">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-12">
-          Copyright &copy; Neat 2015
-        </div>
-      </div>
-    </div>
-  </div>
-</footer>
-
-<!-- Scroll to Top Button (Only visible on small and extra-small screen sizes) -->
-<div class="scroll-top page-scroll visible-xs visble-sm">
-  <a class="btn btn-primary" href="#page-top">
-    <i class="fa fa-chevron-up"></i>
-  </a>
-</div>
-
-<!-- Portfolio Modals -->
-<div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true">
-  <div class="modal-content">
-    <div class="close-modal" data-dismiss="modal">
-      <div class="lr">
-        <div class="rl">
-        </div>
-      </div>
-    </div>
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-8 col-lg-offset-2">
-          <div class="modal-body">
-            <h2>Monday Plan</h2>
-            <hr class="star-primary">
-            <!--<img src="img/menu plan/1.jpg" class="img-responsive img-centered" alt="">-->
-            <%= image_tag('1.jpg', class: 'img-responsive img-centered') %>
-            <p>Lorem ipsum dolor sit amet, ullum nemore indoctum cum ne, per eu eius sententiae delicatissimi, recteque laboramus delicatissimi mel ex. Cum case evertitur cu, mel summo eleifend salutatus et. Malis aeterno vituperata sea no. Partem molestie constituto vel ad, eum quot nominavi instructior ei. Falli legendos vel no. Dolorum cotidieque quo ex, ne malis ridens quo.</p>
-            <ul class="list-inline item-details">
-              <li>Price:
-                <strong>P 1000-1500
-                </strong>
-              </li>
-              <li>Date:
-                <strong>March 2014
-                </strong>
-              </li>
-              <li>Service:
-                <strong>Shredding Diet
-                </strong>
-              </li>
-            </ul>
-            <!--                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>-->
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-<div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" role="dialog" aria-hidden="true">
-  <div class="modal-content">
-    <div class="close-modal" data-dismiss="modal">
-      <div class="lr">
-        <div class="rl">
-        </div>
-      </div>
-    </div>
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-8 col-lg-offset-2">
-          <div class="modal-body">
-            <h2>Tuesday Plan</h2>
-            <hr class="star-primary">
-            <!--<img src="img/menu plan/2.jpg" class="img-responsive img-centered" alt="">-->
-            <%= image_tag('2.jpg', class: 'img-responsive img-centered') %>
-            <p>Lorem ipsum dolor sit amet, ullum nemore indoctum cum ne, per eu eius sententiae delicatissimi, recteque laboramus delicatissimi mel ex. Cum case evertitur cu, mel summo eleifend salutatus et. Malis aeterno vituperata sea no. Partem molestie constituto vel ad, eum quot nominavi instructior ei. Falli legendos vel no. Dolorum cotidieque quo ex, ne malis ridens quo.</p>
-            <ul class="list-inline item-details">
-              <li>Price:
-                <strong>P 1000-1500
-                </strong>
-              </li>
-              <li>Date:
-                <strong>March 2014
-                </strong>
-              </li>
-              <li>Service:
-                <strong>Shredding Diet
-                </strong>
-              </li>
-            </ul>
-            <!--                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>-->
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-<div class="portfolio-modal modal fade" id="portfolioModal3" tabindex="-1" role="dialog" aria-hidden="true">
-  <div class="modal-content">
-    <div class="close-modal" data-dismiss="modal">
-      <div class="lr">
-        <div class="rl">
-        </div>
-      </div>
-    </div>
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-8 col-lg-offset-2">
-          <div class="modal-body">
-            <h2>Wednesday Plan</h2>
-            <hr class="star-primary">
-            <!--<img src="img/menu plan/3.jpg" class="img-responsive img-centered" alt="">-->
-            <%= image_tag('3.jpg', class: 'img-responsive img-centered') %>
-            <p>Lorem ipsum dolor sit amet, ullum nemore indoctum cum ne, per eu eius sententiae delicatissimi, recteque laboramus delicatissimi mel ex. Cum case evertitur cu, mel summo eleifend salutatus et. Malis aeterno vituperata sea no. Partem molestie constituto vel ad, eum quot nominavi instructior ei. Falli legendos vel no. Dolorum cotidieque quo ex, ne malis ridens quo.</p>
-            <ul class="list-inline item-details">
-              <li>Price:
-                <strong>P 1000-1500
-                </strong>
-              </li>
-              <li>Date:
-                <strong>March 2014
-                </strong>
-              </li>
-              <li>Service:
-                <strong>Shredding Diet
-                </strong>
-              </li>
-            </ul>
-            <!--                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>-->
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-<div class="portfolio-modal modal fade" id="portfolioModal4" tabindex="-1" role="dialog" aria-hidden="true">
-  <div class="modal-content">
-    <div class="close-modal" data-dismiss="modal">
-      <div class="lr">
-        <div class="rl">
-        </div>
-      </div>
-    </div>
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-8 col-lg-offset-2">
-          <div class="modal-body">
-            <h2>Thursday Plan</h2>
-            <hr class="star-primary">
-            <!--<img src="img/menu plan/4.jpg" class="img-responsive img-centered" alt="">-->
-            <%= image_tag('4.jpg', class: 'img-responsive img-centered') %>
-            <p>Lorem ipsum dolor sit amet, ullum nemore indoctum cum ne, per eu eius sententiae delicatissimi, recteque laboramus delicatissimi mel ex. Cum case evertitur cu, mel summo eleifend salutatus et. Malis aeterno vituperata sea no. Partem molestie constituto vel ad, eum quot nominavi instructior ei. Falli legendos vel no. Dolorum cotidieque quo ex, ne malis ridens quo.</p>
-            <ul class="list-inline item-details">
-              <li>Price:
-                <strong>P 1000-1500
-                </strong>
-              </li>
-              <li>Date:
-                <strong>March 2014
-                </strong>
-              </li>
-              <li>Service:
-                <strong>Shredding Diet
-                </strong>
-              </li>
-            </ul>
-            <!--                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>-->
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-<div class="portfolio-modal modal fade" id="portfolioModal5" tabindex="-1" role="dialog" aria-hidden="true">
-  <div class="modal-content">
-    <div class="close-modal" data-dismiss="modal">
-      <div class="lr">
-        <div class="rl">
-        </div>
-      </div>
-    </div>
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-8 col-lg-offset-2">
-          <div class="modal-body">
-            <h2>Friday Plan</h2>
-            <hr class="star-primary">
-            <!--<img src="img/menu plan/5.jpg" class="img-responsive img-centered" alt="">-->
-            <%= image_tag('5.jpg', class: 'img-responsive img-centered') %>
-            <p>Lorem ipsum dolor sit amet, ullum nemore indoctum cum ne, per eu eius sententiae delicatissimi, recteque laboramus delicatissimi mel ex. Cum case evertitur cu, mel summo eleifend salutatus et. Malis aeterno vituperata sea no. Partem molestie constituto vel ad, eum quot nominavi instructior ei. Falli legendos vel no. Dolorum cotidieque quo ex, ne malis ridens quo.</p>
-            <ul class="list-inline item-details">
-              <li>Price:
-                <strong>P 1000-1500
-                </strong>
-              </li>
-              <li>Date:
-                <strong>March 2014
-                </strong>
-              </li>
-              <li>Service:
-                <strong>Shredding Diet
-                </strong>
-              </li>
-            </ul>
-            <!--                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>-->
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-<div class="portfolio-modal modal fade" id="portfolioModal6" tabindex="-1" role="dialog" aria-hidden="true">
-  <div class="modal-content">
-    <div class="close-modal" data-dismiss="modal">
-      <div class="lr">
-        <div class="rl">
-        </div>
-      </div>
-    </div>
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-8 col-lg-offset-2">
-          <div class="modal-body">
-            <h2>Weekend Plan</h2>
-            <hr class="star-primary">
-            <!--<img src="img/menu plan/6.jpg" class="img-responsive img-centered" alt="">-->
-            <%= image_tag('6.jpg', class: 'img-responsive img-centered') %>
-            <p>Lorem ipsum dolor sit amet, ullum nemore indoctum cum ne, per eu eius sententiae delicatissimi, recteque laboramus delicatissimi mel ex. Cum case evertitur cu, mel summo eleifend salutatus et. Malis aeterno vituperata sea no. Partem molestie constituto vel ad, eum quot nominavi instructior ei. Falli legendos vel no. Dolorum cotidieque quo ex, ne malis ridens quo.</p>
-            <ul class="list-inline item-details">
-              <li>Price:
-                <strong>P 1000-1500
-                </strong>
-              </li>
-              <li>Date:
-                <strong>March 2014
-                </strong>
-              </li>
-              <li>Service:
-                <strong>Shredding Diet
-                </strong>
-              </li>
-            </ul>
-            <!--                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>-->
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-<!--    <div class="portfolio-modal modal fade" id="portfolioModalRegister" tabindex="-1" role="dialog" aria-hidden="true">-->
-<section class="modal fade" id="portfolioModalSignUp" tabindex="-1" role="dialog">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-        <h4 class="modal-title">You're a step closer to a healthier life...</h4>
-      </div>
-      <form>
-        <div class="modal-body">
-          <br>
-          <input class='form-control' type='text' name='name' placeholder='Name' />
-          <br>
-          <input class='form-control' type='text' name='email' placeholder='Email Address' />
-          <br>
-          <input class='form-control' type='password' name='password' placeholder='Password' />
-          <br>
-          <input class='form-control' type='password' name='cpassword' placeholder='Confirm Password' />
-          <br>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
-          <button type="submit" class="btn btn-success" data-dismiss="modal">Create My Account</button>
-        </div>
-      </form>
-    </div>
-  </div>
-</section>
+  </section>
 </body>
 </html>

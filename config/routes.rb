@@ -1,7 +1,18 @@
 Rails.application.routes.draw do
   root 'sessions#index'
 
-  get 'user' => 'users#index'
+  post 'sessions/login'
+  get  'sessions/logout'
+  post 'sessions/register'
+
+  get  'home' => 'users#index'
+  post 'users/index'
+
+  get  'users/avail_plan'
+  post 'users/avail_plan'
+
+  get  'users/cancel_plan'
+  post 'users/cancel_plan'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

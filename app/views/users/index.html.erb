@@ -389,9 +389,23 @@
               </li>
             </ul>
             <hr>
-            <h4> PHP XXX.00</h4>
-            <button type="button" class="btn btn-danger btn-block fa-lg" data-dismiss="modal">
-              <i class="fa fa-times "></i> &nbsp; &nbsp; &nbsp; Cancel</button>
+            <h4> PHP 1000.00</h4>
+            <%= form_tag(users_avail_plan_path, method: :post) do %>
+              <%= hidden_field_tag('name', 'Monday Plan') %>
+              <%= hidden_field_tag('price', '1000.00') %>
+
+              <label class="control-label text-danger" for="select">Duration</label>
+              <select name="duration" id="duration" class="form-control">
+                <option value="7">Week</option>
+                <option value="30">Month</option>
+                <option value="365">Year</option>
+              </select>
+              <br>
+              <%= button_tag(type: 'submit', class: 'btn btn-primary btn-block fa-lg') do %>
+                <i class="fa fa-plus"></i>
+                <strong>AVAIL</strong>
+              <% end %>
+            <% end %>
           </div>
         </div>
       </div>
