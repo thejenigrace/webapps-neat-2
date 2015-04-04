@@ -45,13 +45,16 @@
           </li>
           <li class="page-scroll">
             <a href="#" class = "dropdown-toggle" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true">
-              <i class = 'fa fa-user'></i>  &nbsp;diet_guy@gmail.com <span class="caret"></span>
+              <i class = 'fa fa-user'></i>
+              &nbsp;
+              <%= @current_user.name %>
+              <span class="caret"></span>
               <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
                 <li role="presentation">
                   <!--<a role="menuitem" tabindex="-1" href="#">-->
                     <!--<i class = 'fa fa-sign-out' onclick = "accountDropDown.submit();"></i> &nbsp;Log Out-->
                   <!--</a>-->
-                  <%= link_to 'Log Out', sessions_logout_path, role: 'menuitem', tabindex: '-1' %>
+                  <%= link_to('Log Out', sessions_logout_path, role: 'menuitem', tabindex: '-1') %>
                 </li>
               </ul>
             </a>
@@ -68,12 +71,14 @@
     <div class="container">
       <div class="row">
         <div class="col-sm-6" id = >
-          <h4 class = 'account_profile'> Hey there, <span class="first_name">Jon</span>
-            <span class="last_name">Snow</span></h4>
-          <br>
-
+          <h4 class = 'account_profile'>
+            Hey there, <span class="first_name"> <%= @current_user.name %> </span>
+            <!--<span class="last_name">Snow</span>-->
+          </h4>
+          <!--<br>-->
           <h4 class = 'account_profile'> Current Plan:
-            <a id="current_plan" href="#portfolioModal1" data-toggle="modal">Monday Plan
+            <a id="current_plan" href="#portfolioModal1" data-toggle="modal">
+              Monday Plan
               <i class = 'fa fa-question-circle'></i></a></h4>
           <h4 class = 'account_profile'> Subscribed Until: <span class="date"> March 30, 2015</span>
           </h4>
