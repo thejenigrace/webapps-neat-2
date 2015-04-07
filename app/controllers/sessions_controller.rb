@@ -44,7 +44,7 @@ class SessionsController < ApplicationController
 
   def confirm_email
     user = current_user
-    if (params[:confirm_token] == user.confirm_token)
+    if (user.confirm_token = params[:confirm_token])
       user.update_column(:email_confirmed, true)
     end
     redirect_to action: :index
