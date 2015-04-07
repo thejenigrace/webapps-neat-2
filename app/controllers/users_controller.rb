@@ -14,11 +14,13 @@ class UsersController < ApplicationController
     plan.user_id = session[:user_id]
 
     if(plan.name.present? && plan.price.present? && plan.duration.present?)
+      # save plan to the database
       plan.save
 
-      current_user_edit = current_user
-      current_user_edit.plan_id = plan.id
-      current_user_edit.save
+      # save the plan_id to the user
+      edit_current_user = current_user
+      edit_current_user.plan_id = plan.id
+      edit_current_user.save
     end
 
     redirect_to home_path
