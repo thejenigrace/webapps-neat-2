@@ -23,13 +23,29 @@ class SessionsController < ApplicationController
   end
 
   def register
-    # if (params[:name].present? && params[:username].present? && params[:password].present? && params[:password_confirm].present?)
-      user = User.create_user(params[:name], params[:email], params[:password], params[:password_confirm])
-    # end
+      confirm_token = SecureRandom.urlsafe_base64.to_s
+      user = User.create_user(params[:name], params[:email], params[:password], params[:password_confirm], confirm_token)
+
     if user
-      redirect_to root_path
+      message = UserMailer.registration_confirmation(user)
+      session[:user_id] = user.id
+
+      redirect_to sessions_confirmation_path
     else
+      session[:user_id] = nil
       redirect_to action: :index
     end
+  end
+
+  def confirmation
+
+  end
+
+  def confirm_email
+    user = current_user
+    if (params[:confirm_token] == user.confirm_token)
+      user.update_column(:email_confirmed, true)
+    end
+    redirect_to action: :index
   end
 end

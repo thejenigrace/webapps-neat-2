@@ -7,6 +7,9 @@ Rails.application.routes.draw do
   post 'sessions/logout'
   post 'sessions/register'
 
+  get 'sessions/confirmation'
+  post 'sessions/confirm_email'
+
   # users_controller
   get  'home' => 'users#index'
   post 'users/index'

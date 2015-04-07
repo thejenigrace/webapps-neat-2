@@ -2,8 +2,14 @@ class UsersController < ApplicationController
   before_action :require_login
 
   def index
-    @current_user = current_user
-
+    if session[:user_id]
+      @current_user = current_user
+      # user = User.where(id: session[:user_id]).first
+      if @current_user.email_confirmed
+      else
+        redirect_to sessions_confirmation_path
+      end
+    end
   end
 
   def avail_plan
@@ -18,9 +24,7 @@ class UsersController < ApplicationController
       plan.save
 
       # save the plan_id to the user
-      edit_current_user = current_user
-      edit_current_user.plan_id = plan.id
-      edit_current_user.save
+      current_user.update_column(:plan_id, plan.id)
     end
 
     redirect_to home_path

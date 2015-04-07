@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 
+gem 'actionmailer'
+
 gem 'font-awesome-sass', '~> 4.3.2.1'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
