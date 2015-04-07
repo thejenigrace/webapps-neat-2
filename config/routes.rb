@@ -20,6 +20,9 @@ Rails.application.routes.draw do
   get  'users/cancel_plan'
   post 'users/cancel_plan'
 
+  #user_mailer
+  # get 'user_mailer/registration_confirmation'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

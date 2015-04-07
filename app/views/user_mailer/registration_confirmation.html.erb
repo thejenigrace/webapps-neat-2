@@ -1,8 +1,9 @@
 <h1>Welcome to NEAT, <%= @user.name %>!</h1>
     
 <p>
-Welcome to the Neat Community!<br>    
-You have successfully signed up to NEAT, your username is: <%= @user.email %>.<br>
+  Welcome to the Neat Community!<br>
+  You have successfully signed up to NEAT, your username is: <%= @user.email %>.
+  <br>
 </p>
     
 To confirm your registration, please enter the confirmation code below.<br>
@@ -11,4 +12,4 @@ Confirmation code: <%= (@user.confirm_token) %>
 
 <p>Thank you for joining and have a great day!</p>
 
-<p>If you have not signed up for a NEAT account, please ignore this email.</p>
+<p>If you did not signed up for a NEAT account, please ignore this email.</p>
