@@ -15,7 +15,7 @@
       <a class="navbar-brand" href="#page-top">Confirmation Page</a>
     </div>
     <div class="nav navbar-nav navbar-right" style="margin-top:9px">
-        <%= form_tag('/logout', method: :post) do %>
+        <%= form_tag(sessions_logout_path, method: :post) do %>
             <input class='btn btn-success' type='submit' value='Log Out' />
         <% end %>
     </div>
@@ -27,11 +27,14 @@
       <div class="row">
         <br><br><br><br>
         <div class="text-success text-center">
-          <h1 style="font-family: Helvetica, Arial, Sans-Serif; font-size: 30px" >Please enter the confirmation code sent to your email address <br> to activate your neat account.<%= (@email) %> sdadasdasdas</h1>
+          <h1 style="font-family: Helvetica, Arial, Sans-Serif; font-size: 30px" >
+            Please enter the confirmation code sent to your email address <br> to activate your neat account. <%= (@current_user.email) %>
+            <!--sdadasdasdas-->
+          </h1>
         </div>
       <br><br>
       <div class="form-group text-center">
-      <%= form_tag('/confirm', method: :post) do %>
+      <%= form_tag(sessions_confirm_email_path, method: :post) do %>
         <input class='form-control' type='text' name='confirm_token' placeholder='Confirmation Code'/>
           <br><br>
           <input class='btn btn-success' type='submit' value='Confirm' />

@@ -6,6 +6,7 @@ class UsersController < ApplicationController
       @current_user = current_user
       # user = User.where(id: session[:user_id]).first
       if @current_user.email_confirmed
+
       else
         redirect_to sessions_confirmation_path
       end

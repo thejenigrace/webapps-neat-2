@@ -27,7 +27,8 @@ class SessionsController < ApplicationController
       user = User.create_user(params[:name], params[:email], params[:password], params[:password_confirm], confirm_token)
 
     if user
-      message = UserMailer.registration_confirmation(user)
+      # deliver the account confirmation email
+      UserMailer.registration_confirmation(user).deliver
       session[:user_id] = user.id
 
       redirect_to sessions_confirmation_path
@@ -38,7 +39,7 @@ class SessionsController < ApplicationController
   end
 
   def confirmation
-
+    @current_user = current_user
   end
 
   def confirm_email
