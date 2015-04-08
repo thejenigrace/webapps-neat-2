@@ -47,6 +47,7 @@ class SessionsController < ApplicationController
     if (user.confirm_token = params[:confirm_token])
       user.update_column(:email_confirmed, true)
     end
+
     redirect_to action: :index
   end
 end
