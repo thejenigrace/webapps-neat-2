@@ -47,7 +47,7 @@
             <a href="#" class = "dropdown-toggle" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true">
               <i class = 'fa fa-user'></i>
               &nbsp;
-              <%= @current_user.name %>
+              <%= @current_user.email %>
               <span class="caret"></span>
               <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
                 <li role="presentation">
@@ -402,6 +402,7 @@
             <hr>
             <h3> PHP 1000.00 </h3>
             <br>
+            <% if @current_user.plan_id.nil? %>
             <%= form_tag(users_avail_plan_path, method: :post) do %>
               <%= hidden_field_tag('name', 'Monday Plan') %>
               <%= hidden_field_tag('price', '1000.00') %>
@@ -411,6 +412,19 @@
               <%= button_tag(type: 'submit', class: 'btn btn-primary btn-block fa-lg') do %>
                 <i class="fa fa-plus"></i>
                 <strong>AVAIL</strong>
+              <% end %>
+            <% end %>
+            <% else %>
+              <%= form_tag(users_cancel_plan_path, method: :post) do %>
+                <!--<%= hidden_field_tag('name', 'Monday Plan') %>-->
+                <!--<%= hidden_field_tag('price', '1000.00') %>-->
+                <!--<h4 class="control-label text-danger">Duration</h4>-->
+                <!--<input type="text" name="duration" class="form-control" data-provide="datepicker" placeholder="MM/DD/YYYY" />-->
+                <!--<br> <br>-->
+                <%= button_tag(type: 'submit', class: 'btn btn-danger btn-block fa-lg') do %>
+                  <i class="fa fa-cancel"></i>
+                  <strong>CANCEL</strong>
+                <% end %>
               <% end %>
             <% end %>
             <br><br><br><br>

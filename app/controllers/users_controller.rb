@@ -21,11 +21,11 @@ class UsersController < ApplicationController
 
   def avail_plan
     if current_user.plan_id.nil?
-      plan = Plan.new
-      plan.name = params[:name]
-      plan.price = params[:price]
-      plan.duration = params[:duration]
-      plan.user_id = session[:user_id]
+      # plan = Plan.new
+      # plan.name = params[:name]
+      # plan.price = params[:price]
+      # plan.duration = params[:duration]
+      # plan.user_id = session[:user_id]
 
       if(plan.name.present? && plan.price.present? && plan.duration.present?)
         # save plan to the database

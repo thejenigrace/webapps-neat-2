@@ -7,6 +7,10 @@ class ApplicationController < ActionController::Base
     User.where(id: session[:user_id]).first
   end
 
+  def current_user_transaction
+    Transaction.where(user_id: session[:user_id]).first
+  end
+
   private
 
   def require_login
