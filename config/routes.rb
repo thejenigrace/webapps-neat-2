@@ -20,6 +20,9 @@ Rails.application.routes.draw do
   get  'users/cancel_plan'
   post 'users/cancel_plan'
 
+  get 'users/edit_user_info'
+  post 'users/edit_user_info'
+
   #user_mailer
   # get 'user_mailer/registration_confirmation'
 

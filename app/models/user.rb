@@ -1,4 +1,7 @@
 class User < ActiveRecord::Base
+  has_many :transactions
+  has_many :plans, through: :transactions
+
   def self.create_user(name, email, password, password_confirm, confirm_token)
     return false if password != password_confirm
     return false if User.where(email: email).to_a.size > 0

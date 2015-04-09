@@ -7,8 +7,8 @@ class ApplicationController < ActionController::Base
     User.where(id: session[:user_id]).first
   end
 
-  def current_user_transaction
-    Transaction.where(user_id: session[:user_id]).first
+  def current_user_plan(name)
+    Plan.where(name: name).first
   end
 
   private

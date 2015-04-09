@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="dataSourceStorageLocal">
+    <data-source name="Rails neat-v-1: development" uuid="09c95528-0e08-46c0-8638-cd1de19e3ce6">
+      <secret-storage>memory</secret-storage>
+    </data-source>
+    <data-source name="Rails neat-v-1: test" uuid="038e18e0-56b9-4285-b477-1d33c9d1ab55">
+      <secret-storage>memory</secret-storage>
+    </data-source>
+  </component>
+</project>

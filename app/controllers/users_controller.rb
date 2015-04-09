@@ -3,16 +3,16 @@ class UsersController < ApplicationController
 
   def index
     if session[:user_id]
-      @current_user = current_user
+      @user = current_user
 
       # user = User.where(id: session[:user_id]).first
-      if @current_user.email_confirmed
-        if @current_user.plan_id != nil
-          @user_plan = Plan.where(id: @current_user.plan_id).first
-        else
-          @user_plan = Plan.new
-          @user_plan.duration = "Doesn't have a plan yet"
-        end
+      if @user.email_confirmed
+        # if @current_user.plan_id != nil
+        #   @user_plan = Plan.where(id: @current_user.plan_id).first
+        # else
+        #   @user_plan = Plan.new
+        #   @user_plan.duration = "Doesn't have a plan yet"
+        # end
       else
         redirect_to sessions_confirmation_path
       end
@@ -45,12 +45,26 @@ class UsersController < ApplicationController
     #   UserMailer.avail_plan_confirmation(current_user, change_current_plan).deliver
     # end
 
-    if current_user_transaction.nil?
+    # temporary
+
+    transaction = Transaction.new
+    transaction.user_id = current_user.id
+    transaction.plan_id = current_user_plan(params[:name]).id
+    transaction.start_date = params[:startdate]
+    transaction.end_date = params[:enddate]
+
+    if(current_user.billing_address != nil)
+      transaction.save
+    end
 
     redirect_to home_path
   end
 
   def cancel_plan
 
+  end
+
+  def edit_user_info
+    # current_user.update_column(:billing_address, params[:newbillingaddress])
   end
 end
