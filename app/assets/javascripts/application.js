@@ -12,7 +12,19 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require turbolinks
 //= require bootstrap-datepicker
+//= require bootstrap-datepicker/core
+//= require bootstrap-datepicker/locales/bootstrap-datepicker.es.js
+//= require bootstrap-datepicker/locales/bootstrap-datepicker.fr.js
+//= require turbolinks
 //= require_tree .
+
+var plan_id;
+
+function storePlanIDForCancel(id) {
+    plan_id = id;
+    console.log("plan_id = " + plan_id);
+    document.getElementById("plan_id").setAttribute("value", plan_id.toString());
+}
+
 

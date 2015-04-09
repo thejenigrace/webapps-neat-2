@@ -7,9 +7,10 @@ class UserMailer < ApplicationMailer
          subject: 'Welcome to Neat, #{user.name}!')
   end
 
-  def avail_plan_confirmation(user, plan)
+  def avail_plan_confirmation(user, plan, transaction)
     @user = user
     @plan = plan
+    @transaction = transaction
     mail(to: user.email,
          subject: 'Neat Healthy Lifestyle - Avail of Plan')
   end
