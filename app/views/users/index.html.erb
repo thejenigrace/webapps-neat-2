@@ -314,16 +314,16 @@
   <div class="modal fade bs-example-modal-sm" id = 'editNameModal' tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-sm">
       <div class="modal-content modal-sm">
-        <form>
+        <%= form_tag(users_edit_user_info_path, method: :post) do %>
           <div class="modal-body modal-sm">
             <br>
-            <input class='form-control' type='text' name='name' placeholder='New Name' />
+            <input class='form-control' type='text' name='new_name' placeholder='New Name' />
           </div>
           <div class="modal-footer modal-sm">
+            <%= submit_tag('Save Changes', class: 'btn btn-sm btn-danger') %>
             <button type="button" class="btn btn-sm btn-default" data-dismiss="modal">Cancel</button>
-            <button type="submit" class="btn btn-sm btn-success" data-dismiss="modal">Save Changes</button>
           </div>
-        </form>
+        <% end %>
       </div>
     </div>
   </div>
@@ -333,7 +333,7 @@
         <%= form_tag(users_edit_user_info_path, method: :post) do %>
           <div class="modal-body modal-sm">
             <br>
-            <input class='form-control' type='text' name='newbillingaddress' placeholder='New Billing Address' />
+            <input class='form-control' type='text' name='new_billing_address' placeholder='New Billing Address' />
           </div>
           <div class="modal-footer modal-sm">
             <!--<button type="submit" class="btn btn-sm btn-danger">Save Changes</button>-->
@@ -409,13 +409,13 @@
             <hr>
             <h3> PHP 200.00 </h3>
             <br>
-
             <%= form_tag(users_avail_plan_path, method: :post) do %>
               <%= hidden_field_tag('name', 'Monday Plan') %>
               <%= hidden_field_tag('price', '200.00') %>
-              <h4 class="control-label text-danger">Date</h4>
-              <input type="text" name="startdate" class="form-control" data-provide="datepicker" placeholder="MM/DD/YYYY" />
-              <input type="text" name="enddate" class="form-control" data-provide="datepicker" placeholder="MM/DD/YYYY" />
+              <h4 class="control-label text-danger">Start Date:</h4>
+              <input type="text" name="start_date" class="form-control" data-provide="datepicker" placeholder="MM/DD/YYYY" />
+              <h4 class="control-label text-danger">End Date:</h4>
+              <input type="text" name="end_date" class="form-control" data-provide="datepicker" placeholder="MM/DD/YYYY" />
               <br><br>
               <%= button_tag(type: 'submit', class: 'btn btn-primary btn-block fa-lg') do %>
                 <i class="fa fa-plus"></i>
@@ -466,14 +466,16 @@
             <!--<button type="button" class="btn btn-primary btn-block fa-lg" data-dismiss="modal">-->
               <!--<i class="fa fa-plus "></i> &nbsp; &nbsp; &nbsp; Avail-->
             <!--</button>-->
-            <h3> PHP 1100.00 </h3>
+            <h3> PHP 250.00 </h3>
             <br>
             <%= form_tag(users_avail_plan_path, method: :post) do %>
               <%= hidden_field_tag('name', 'Tuesday Plan') %>
-              <%= hidden_field_tag('price', '1100.00') %>
-              <h4 class="control-label text-danger">Duration</h4>
-              <input type="text" name="duration" class="form-control" data-provide="datepicker" placeholder="MM/DD/YYYY" />
-              <br> <br>
+              <%= hidden_field_tag('price', '250.00') %>
+              <h4 class="control-label text-danger">Start Date:</h4>
+              <input type="text" name="start_date" class="form-control" data-provide="datepicker" placeholder="MM/DD/YYYY" />
+              <h4 class="control-label text-danger">End Date:</h4>
+              <input type="text" name="end_date" class="form-control" data-provide="datepicker" placeholder="MM/DD/YYYY" />
+              <br><br>
               <%= button_tag(type: 'submit', class: 'btn btn-primary btn-block fa-lg') do %>
                 <i class="fa fa-plus"></i>
                 <strong>AVAIL</strong>
@@ -524,14 +526,16 @@
             <!--<button type="button" class="btn btn-primary btn-block fa-lg" data-dismiss="modal">-->
               <!--<i class="fa fa-plus "></i> &nbsp; &nbsp; &nbsp; Avail-->
             <!--</button>-->
-            <h3> PHP 1200.00 </h3>
+            <h3> PHP 250.00 </h3>
             <br>
             <%= form_tag(users_avail_plan_path, method: :post) do %>
               <%= hidden_field_tag('name', 'Wednesday Plan') %>
-              <%= hidden_field_tag('price', '1200.00') %>
-              <h4 class="control-label text-danger">Duration</h4>
-              <input type="text" name="duration" class="form-control" data-provide="datepicker" placeholder="MM/DD/YYYY" />
-              <br> <br>
+              <%= hidden_field_tag('price', '250.00') %>
+              <h4 class="control-label text-danger">Start Date:</h4>
+              <input type="text" name="start_date" class="form-control" data-provide="datepicker" placeholder="MM/DD/YYYY" />
+              <h4 class="control-label text-danger">End Date:</h4>
+              <input type="text" name="end_date" class="form-control" data-provide="datepicker" placeholder="MM/DD/YYYY" />
+              <br><br>
               <%= button_tag(type: 'submit', class: 'btn btn-primary btn-block fa-lg') do %>
                 <i class="fa fa-plus"></i>
                 <strong>AVAIL</strong>
@@ -578,18 +582,20 @@
               </li>
             </ul>
             <hr>
-            <h4> PHP XXX.00</h4>
+            <!--<h4> PHP XXX.00</h4>-->
             <!--<button type="button" class="btn btn-primary btn-block fa-lg" data-dismiss="modal">-->
               <!--<i class="fa fa-plus "></i> &nbsp; &nbsp; &nbsp; Avail-->
             <!--</button>-->
-            <h3> PHP 1300.00 </h3>
+            <h3> PHP 300.00 </h3>
             <br>
             <%= form_tag(users_avail_plan_path, method: :post) do %>
               <%= hidden_field_tag('name', 'Thursday Plan') %>
-              <%= hidden_field_tag('price', '1300.00') %>
-              <h4 class="control-label text-danger">Duration</h4>
-              <input type="text" name="duration" class="form-control" data-provide="datepicker" placeholder="MM/DD/YYYY" />
-              <br> <br>
+              <%= hidden_field_tag('price', '300.00') %>
+              <h4 class="control-label text-danger">Start Date:</h4>
+              <input type="text" name="start_date" class="form-control" data-provide="datepicker" placeholder="MM/DD/YYYY" />
+              <h4 class="control-label text-danger">End Date:</h4>
+              <input type="text" name="end_date" class="form-control" data-provide="datepicker" placeholder="MM/DD/YYYY" />
+              <br><br>
               <%= button_tag(type: 'submit', class: 'btn btn-primary btn-block fa-lg') do %>
                 <i class="fa fa-plus"></i>
                 <strong>AVAIL</strong>
@@ -640,14 +646,16 @@
             <!--<button type="button" class="btn btn-primary btn-block fa-lg" data-dismiss="modal">-->
               <!--<i class="fa fa-plus "></i> &nbsp; &nbsp; &nbsp; Avail-->
             <!--</button>-->
-            <h3> PHP 1400.00 </h3>
+            <h3> PHP 350.00 </h3>
             <br>
             <%= form_tag(users_avail_plan_path, method: :post) do %>
               <%= hidden_field_tag('name', 'Friday Plan') %>
-              <%= hidden_field_tag('price', '1400.00') %>
-              <h4 class="control-label text-danger">Duration</h4>
-              <input type="text" name="duration" class="form-control" data-provide="datepicker" placeholder="MM/DD/YYYY" />
-              <br> <br>
+              <%= hidden_field_tag('price', '350.00') %>
+              <h4 class="control-label text-danger">Start Date:</h4>
+              <input type="text" name="start_date" class="form-control" data-provide="datepicker" placeholder="MM/DD/YYYY" />
+              <h4 class="control-label text-danger">End Date:</h4>
+              <input type="text" name="end_date" class="form-control" data-provide="datepicker" placeholder="MM/DD/YYYY" />
+              <br><br>
               <%= button_tag(type: 'submit', class: 'btn btn-primary btn-block fa-lg') do %>
                 <i class="fa fa-plus"></i>
                 <strong>AVAIL</strong>
@@ -698,14 +706,16 @@
             <!--<button type="button" class="btn btn-primary btn-block fa-lg" data-dismiss="modal">-->
               <!--<i class="fa fa-plus "></i> &nbsp; &nbsp; &nbsp; Avail-->
             <!--</button>-->
-            <h3> PHP 1500.00 </h3>
+            <h3> PHP 500.00 </h3>
             <br>
             <%= form_tag(users_avail_plan_path, method: :post) do %>
               <%= hidden_field_tag('name', 'Weekend Plan') %>
-              <%= hidden_field_tag('price', '1500.00') %>
-              <h4 class="control-label text-danger">Duration</h4>
-              <input type="text" name="duration" class="form-control" data-provide="datepicker" placeholder="MM/DD/YYYY" />
-              <br> <br>
+              <%= hidden_field_tag('price', '500.00') %>
+              <h4 class="control-label text-danger">Start Date:</h4>
+              <input type="text" name="start_date" class="form-control" data-provide="datepicker" placeholder="MM/DD/YYYY" />
+              <h4 class="control-label text-danger">End Date:</h4>
+              <input type="text" name="end_date" class="form-control" data-provide="datepicker" placeholder="MM/DD/YYYY" />
+              <br><br>
               <%= button_tag(type: 'submit', class: 'btn btn-primary btn-block fa-lg') do %>
                 <i class="fa fa-plus"></i>
                 <strong>AVAIL</strong>

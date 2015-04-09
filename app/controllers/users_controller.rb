@@ -13,6 +13,7 @@ class UsersController < ApplicationController
         #   @user_plan = Plan.new
         #   @user_plan.duration = "Doesn't have a plan yet"
         # end
+
       else
         redirect_to sessions_confirmation_path
       end
@@ -50,8 +51,8 @@ class UsersController < ApplicationController
     transaction = Transaction.new
     transaction.user_id = current_user.id
     transaction.plan_id = current_user_plan(params[:name]).id
-    transaction.start_date = params[:startdate]
-    transaction.end_date = params[:enddate]
+    transaction.start_date = params[:start_date]
+    transaction.end_date = params[:end_date]
 
     if(current_user.billing_address != nil)
       transaction.save
@@ -65,6 +66,15 @@ class UsersController < ApplicationController
   end
 
   def edit_user_info
-    # current_user.update_column(:billing_address, params[:newbillingaddress])
+
+    if params[:new_name] != nil
+      current_user.update_column(:name, params[:new_name])
+    end
+
+    if params[:new_billing_address] != nil
+      current_user.update_column(:billing_address, params[:new_billing_address])
+    end
+
+    redirect_to home_path
   end
 end
