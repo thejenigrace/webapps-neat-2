@@ -12,6 +12,15 @@ class UserMailer < ApplicationMailer
     @plan = plan
     @transaction = transaction
     mail(to: user.email,
-         subject: 'Neat Healthy Lifestyle - Avail of Plan')
+         subject: 'Neat Healthy Lifestyle - Plan Availed')
   end
+
+  def cancel_plan_confirmation(user, plan, transaction)
+    @user = user
+    @plan = plan
+    @transaction = transaction
+    mail(to: user.email,
+         subject: 'Neat Healthy Lifestyle - Plan Cancelled')
+  end
+
 end

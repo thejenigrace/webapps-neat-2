@@ -23,7 +23,10 @@ var plan_id;
 
 function storePlanIDForCancel(id) {
     plan_id = id;
+
+    // debugging
     console.log("plan_id = " + plan_id);
+
     document.getElementById("plan_id").setAttribute("value", plan_id.toString());
 }
 

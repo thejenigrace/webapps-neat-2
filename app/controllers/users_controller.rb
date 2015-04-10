@@ -6,7 +6,14 @@ class UsersController < ApplicationController
       @user = current_user
 
       if @user.email_confirmed
-        @my_plans = Transaction.where(user_id: session[:user_id]).all
+        @my_transactions = Transaction.where(user_id: session[:user_id]).all
+
+        @plan1 = Plan.where(id: 1).first
+        @plan2 = Plan.where(id: 2).first
+        @plan3 = Plan.where(id: 3).first
+        @plan4 = Plan.where(id: 4).first
+        @plan5 = Plan.where(id: 5).first
+        @plan6 = Plan.where(id: 6).first
       else
         redirect_to sessions_confirmation_path
       end
@@ -34,6 +41,9 @@ class UsersController < ApplicationController
   def cancel_plan
     transaction = Transaction.where(user_id: session[:user_id], plan_id: params[:plan_id]).first
     transaction.update_column(:user_id, -session[:user_id])
+
+    # deliver the cancel plan confirmation email
+    UserMailer.cancel_plan_confirmation(current_user, current_user_plan_by_id(params[:plan_id]), transaction).deliver
 
     redirect_to home_path
   end

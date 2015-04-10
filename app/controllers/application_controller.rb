@@ -11,6 +11,10 @@ class ApplicationController < ActionController::Base
     Plan.where(name: name).first
   end
 
+  def current_user_plan_by_id(id)
+    Plan.where(id: id).first
+  end
+
   private
 
   def require_login

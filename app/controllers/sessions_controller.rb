@@ -4,6 +4,13 @@ class SessionsController < ApplicationController
   def index
     if session[:user_id]
       redirect_to home_path
+    else
+      @plan1 = Plan.where(id: 1).first
+      @plan2 = Plan.where(id: 2).first
+      @plan3 = Plan.where(id: 3).first
+      @plan4 = Plan.where(id: 4).first
+      @plan5 = Plan.where(id: 5).first
+      @plan6 = Plan.where(id: 6).first
     end
   end
 
