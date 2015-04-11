@@ -35,7 +35,7 @@ class SessionsController < ApplicationController
 
     if user
       # deliver the account confirmation email
-      UserMailer.registration_confirmation(user).deliver
+      UserMailer.registration_confirmation(user).deliver_now
       session[:user_id] = user.id
 
       redirect_to sessions_confirmation_path

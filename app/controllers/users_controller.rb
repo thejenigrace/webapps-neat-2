@@ -32,7 +32,7 @@ class UsersController < ApplicationController
       transaction.save
 
       # deliver the avail plan confirmation email
-      UserMailer.avail_plan_confirmation(current_user, current_user_plan(params[:name]), transaction).deliver
+      UserMailer.avail_plan_confirmation(current_user, current_user_plan(params[:name]), transaction).deliver_now
     end
 
     redirect_to home_path
@@ -43,7 +43,7 @@ class UsersController < ApplicationController
     transaction.update_column(:user_id, -session[:user_id])
 
     # deliver the cancel plan confirmation email
-    UserMailer.cancel_plan_confirmation(current_user, current_user_plan_by_id(params[:plan_id]), transaction).deliver
+    UserMailer.cancel_plan_confirmation(current_user, current_user_plan_by_id(params[:plan_id]), transaction).deliver_now
 
     redirect_to home_path
   end
