@@ -4,7 +4,7 @@ class UserMailer < ApplicationMailer
   def registration_confirmation(user)
     @user = user
     mail(to: user.email,
-         subject: 'Welcome to Neat, #{user.name}!')
+         subject: "Welcome to Neat, #{user.name}!")
   end
 
   def avail_plan_confirmation(user, plan, transaction)

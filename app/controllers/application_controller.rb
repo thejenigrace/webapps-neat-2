@@ -20,4 +20,5 @@ class ApplicationController < ActionController::Base
   def require_login
     redirect_to sessions_login_path if session[:user_id].nil?
   end
+
 end

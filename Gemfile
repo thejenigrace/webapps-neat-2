@@ -5,6 +5,8 @@ gem 'bootstrap-datepicker-rails', '~> 1.4.0'
 gem 'font-awesome-sass', '~> 4.3.2.1'
 
 gem 'actionmailer', '~> 4.2.1'
+gem 'less-rails'
+gem 'therubyracer'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.1'

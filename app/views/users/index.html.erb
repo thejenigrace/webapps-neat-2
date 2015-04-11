@@ -118,9 +118,9 @@
             <%= image_tag('1.jpg', class: 'img-responsive') %>
             <div class="col-sm-14 portfolio-item text-center">
               <br>
-              <p><strong>Monday Plan</strong></p>
-              <p>Lorem ipsum dolor sit amet, has eu copiosae erroribus.</p>
-              <p>Price: P <%= @plan1.price %></p>
+              <p><strong><%= @plan1.name %></strong></p>
+              <p><%= @plan1.description %></p>
+              <p>P <%= @plan1.price %>.00 / day</p>
             </div>
           </a>
         </div>
@@ -134,9 +134,9 @@
             <%= image_tag('2.jpg', class: 'img-responsive') %>
             <div class="col-sm-14 portfolio-item text-center">
               <br>
-              <p><strong>Tuesday Plan</strong></p>
-              <p>Lorem ipsum dolor sit amet, has eu copiosae erroribus.</p>
-              <p>Price: P <%= @plan2.price %></p>
+              <p><strong><%= @plan2.name %></strong></p>
+              <p><%= @plan2.description %></p>
+              <p>P <%= @plan2.price %>.00 / day</p>
             </div>
           </a>
         </div>
@@ -150,9 +150,9 @@
             <%= image_tag('3.jpg', class: 'img-responsive') %>
             <div class="col-sm-14 portfolio-item text-center">
               <br>
-              <p><strong>Wednesday Plan</strong></p>
-              <p>Lorem ipsum dolor sit amet, has eu copiosae erroribus.</p>
-              <p>Price: P <%= @plan3.price %></p>
+              <p><strong><%= @plan3.name %></strong></p>
+              <p><%= @plan3.description %></p>
+              <p>P <%= @plan3.price %>.00 / day</p>
             </div>
           </a>
         </div>
@@ -166,9 +166,9 @@
             <%= image_tag('4.jpg', class: 'img-responsive') %>
             <div class="col-sm-14 portfolio-item text-center">
               <br>
-              <p><strong>Thursday Plan</strong></p>
-              <p>Lorem ipsum dolor sit amet, has eu copiosae erroribus.</p>
-              <p>Price: P <%= @plan4.price %></p>
+              <p><strong><%= @plan4.name %></strong></p>
+              <p><%= @plan4.description %></p>
+              <p>P <%= @plan4.price %>.00 / day</p>
             </div>
           </a>
         </div>
@@ -182,9 +182,9 @@
             <%= image_tag('5.jpg', class: 'img-responsive') %>
             <div class="col-sm-14 portfolio-item text-center">
               <br>
-              <p><strong>Friday Plan</strong></p>
-              <p>Lorem ipsum dolor sit amet, has eu copiosae erroribus.</p>
-              <p>Price: P <%= @plan5.price %></p>
+              <p><strong><%= @plan5.name %></strong></p>
+              <p><%= @plan5.description %></p>
+              <p>P <%= @plan5.price %>.00 / day</p>
             </div>
           </a>
         </div>
@@ -198,9 +198,9 @@
             <%= image_tag('6.jpg', class: 'img-responsive') %>
             <div class="col-sm-14 portfolio-item text-center">
               <br>
-              <p><strong>Weekend Plan</strong></p>
-              <p>Lorem ipsum dolor sit amet, has eu copiosae erroribus.</p>
-              <p>Price: P <%= @plan6.price %></p>
+              <p><strong><%= @plan6.name %></strong></p>
+              <p><%= @plan6.description %></p>
+              <p>P <%= @plan6.price %>.00 / day</p>
             </div>
           </a>
         </div>
@@ -356,7 +356,7 @@
         </div>
       </div>
       <div class="container">
-        <h2>Gains, bruh</h2>
+        <h2><%= @plan1.name %></h2>
         <hr class="star-primary">
         <div class="row">
           <div class="col-lg-8 ">
@@ -365,7 +365,7 @@
             </div>
           </div>
           <div class = 'col-lg-4'>
-            <p class = 'menu_description'>Aliquam et blandit mauris. Suspendisse tincidunt ullamcorper tortor eget blandit. Curabitur pellentesque justo mi, vel bibendum eros tempus non. Proin ut ex pretium, euismod tortor ac, luctus urna. Aenean hendrerit ornare tellus, in accumsan libero hendrerit nec. </p>
+            <p class = 'menu_description'><%= @plan1.description %> </p>
             <!--<hr>-->
             <!--<ul class="item-details menu_description" >-->
               <!--<li>Nullam ullamcorper elit ac neque lacinia, ac facilisis lorem luctus.-->
@@ -380,16 +380,17 @@
               <!--</li>-->
             <!--</ul>-->
             <hr>
-            <h3> PHP <%= @plan1.price %> </h3>
+            <h3> PHP <%= @plan1.price %>.00 / day </h3>
             <br>
             <% if @user.billing_address.nil? %>
-              <a href="#billingSettings" class="btn btn-danger btn-block fa-lg" data-dismiss="modal">Setup Billing Address To Avail</a>
+              <a href="#billingSettings" class="btn btn-danger btn-block fa-lg billingSettings" data-dismiss="modal">Setup Billing Address To Avail</a>
             <% else %>
               <%= form_tag(users_avail_plan_path, method: :post) do %>
-                <%= hidden_field_tag('name', 'Monday Plan') %>
-                <%= hidden_field_tag('price', '200.00') %>
+                <%= hidden_field_tag('name',  @plan1.name) %>
+                <%= hidden_field_tag('price', @plan1.price) %>
                 <h4 class="control-label text-danger">Start Date:</h4>
-                <input type="text" name="start_date" class="form-control" data-provide="datepicker" placeholder="MM/DD/YYYY" />
+                <input type="text" name="start_date" class="form-control" 
+                  data-provide="datepicker" placeholder="MM/DD/YYYY"/>
                 <h4 class="control-label text-danger">End Date:</h4>
                 <input type="text" name="end_date" class="form-control" data-provide="datepicker" placeholder="MM/DD/YYYY" />
                 <br><br>
@@ -414,7 +415,7 @@
         </div>
       </div>
       <div class="container">
-        <h2>Gains, bruh</h2>
+        <h2><%= @plan2.name %></h2>
         <hr class="star-primary">
         <div class="row">
           <div class="col-lg-8 ">
@@ -423,7 +424,7 @@
             </div>
           </div>
           <div class = 'col-lg-4'>
-            <p class = 'menu_description'>Aliquam et blandit mauris. Suspendisse tincidunt ullamcorper tortor eget blandit. Curabitur pellentesque justo mi, vel bibendum eros tempus non. Proin ut ex pretium, euismod tortor ac, luctus urna. Aenean hendrerit ornare tellus, in accumsan libero hendrerit nec. </p>
+            <p class = 'menu_description'><%= @plan2.description %></p>
             <!--<hr>-->
             <!--<ul class="item-details menu_description" >-->
               <!--<li>Nullam ullamcorper elit ac neque lacinia, ac facilisis lorem luctus.-->
@@ -438,14 +439,14 @@
               <!--</li>-->
             <!--</ul>-->
             <hr>
-            <h3> PHP <%= @plan2.price %> </h3>
+            <h3> PHP <%= @plan2.price %>.00 / day </h3>
             <br>
             <% if @user.billing_address.nil? %>
-              <a href="#billingSettings" class="btn btn-danger btn-block fa-lg" data-dismiss="modal">Setup Billing Address To Avail</a>
+              <a href="#billingSettings" class="btn btn-danger btn-block fa-lg billingSettings" data-dismiss="modal">Setup Billing Address To Avail</a>
             <% else %>
               <%= form_tag(users_avail_plan_path, method: :post) do %>
-                <%= hidden_field_tag('name', 'Tuesday Plan') %>
-                <%= hidden_field_tag('price', '250.00') %>
+                <%= hidden_field_tag('name', @plan2.name) %>
+                <%= hidden_field_tag('price', @plan2.price) %>
                 <h4 class="control-label text-danger">Start Date:</h4>
                 <input type="text" name="start_date" class="form-control" data-provide="datepicker" placeholder="MM/DD/YYYY" />
                 <h4 class="control-label text-danger">End Date:</h4>
@@ -472,7 +473,7 @@
         </div>
       </div>
       <div class="container">
-        <h2>Gains, bruh</h2>
+        <h2><%= @plan3.name %></h2>
         <hr class="star-primary">
         <div class="row">
           <div class="col-lg-8 ">
@@ -481,7 +482,7 @@
             </div>
           </div>
           <div class = 'col-lg-4'>
-            <p class = 'menu_description'>Aliquam et blandit mauris. Suspendisse tincidunt ullamcorper tortor eget blandit. Curabitur pellentesque justo mi, vel bibendum eros tempus non. Proin ut ex pretium, euismod tortor ac, luctus urna. Aenean hendrerit ornare tellus, in accumsan libero hendrerit nec. </p>
+            <p class = 'menu_description'><%= @plan3.name %> </p>
             <!--<hr>-->
             <!--<ul class="item-details menu_description" >-->
               <!--<li>Nullam ullamcorper elit ac neque lacinia, ac facilisis lorem luctus.-->
@@ -496,14 +497,14 @@
               <!--</li>-->
             <!--</ul>-->
             <hr>
-            <h3> PHP <%= @plan3.price %> </h3>
+            <h3> PHP <%= @plan3.price %>.00 / day </h3>
             <br>
             <% if @user.billing_address.nil? %>
-              <a href="#billingSettings" class="btn btn-danger btn-block fa-lg" data-dismiss="modal">Setup Billing Address To Avail</a>
+              <a href="#billingSettings" class="btn btn-danger btn-block fa-lg billingSettings" data-dismiss="modal">Setup Billing Address To Avail</a>
             <% else %>
               <%= form_tag(users_avail_plan_path, method: :post) do %>
-                <%= hidden_field_tag('name', 'Wednesday Plan') %>
-                <%= hidden_field_tag('price', '300.00') %>
+                <%= hidden_field_tag('name', @plan3.name) %>
+                <%= hidden_field_tag('price', @plan3.price) %>
                 <h4 class="control-label text-danger">Start Date:</h4>
                 <input type="text" name="start_date" class="form-control" data-provide="datepicker" placeholder="MM/DD/YYYY" />
                 <h4 class="control-label text-danger">End Date:</h4>
@@ -530,7 +531,7 @@
         </div>
       </div>
       <div class="container">
-        <h2>Gains, bruh</h2>
+        <h2><%= @plan4.name %></h2>
         <hr class="star-primary">
         <div class="row">
           <div class="col-lg-8 ">
@@ -539,7 +540,7 @@
             </div>
           </div>
           <div class = 'col-lg-4'>
-            <p class = 'menu_description'>Aliquam et blandit mauris. Suspendisse tincidunt ullamcorper tortor eget blandit. Curabitur pellentesque justo mi, vel bibendum eros tempus non. Proin ut ex pretium, euismod tortor ac, luctus urna. Aenean hendrerit ornare tellus, in accumsan libero hendrerit nec. </p>
+            <p class = 'menu_description'><%= @plan4.description %> </p>
             <!--<hr>-->
             <!--<ul class="item-details menu_description" >-->
               <!--<li>Nullam ullamcorper elit ac neque lacinia, ac facilisis lorem luctus.-->
@@ -554,14 +555,14 @@
               <!--</li>-->
             <!--</ul>-->
             <hr>
-            <h3> PHP <%= @plan4.price %> </h3>
+            <h3> PHP <%= @plan4.price %>.00 / day </h3>
             <br>
             <% if @user.billing_address.nil? %>
-              <a href="#billingSettings" class="btn btn-danger btn-block fa-lg" data-dismiss="modal">Setup Billing Address To Avail</a>
+              <a href="#billingSettings" class="btn btn-danger btn-block fa-lg billingSettings" data-dismiss="modal">Setup Billing Address To Avail</a>
             <% else %>
               <%= form_tag(users_avail_plan_path, method: :post) do %>
-                <%= hidden_field_tag('name', 'Thursday Plan') %>
-                <%= hidden_field_tag('price', '350.00') %>
+                <%= hidden_field_tag('name', @plan4.name) %>
+                <%= hidden_field_tag('price', @plan4.price) %>
                 <h4 class="control-label text-danger">Start Date:</h4>
                 <input type="text" name="start_date" class="form-control" data-provide="datepicker" placeholder="MM/DD/YYYY" />
                 <h4 class="control-label text-danger">End Date:</h4>
@@ -588,7 +589,7 @@
         </div>
       </div>
       <div class="container">
-        <h2>Gains, bruh</h2>
+        <h2><%= @plan5.name %></h2>
         <hr class="star-primary">
         <div class="row">
           <div class="col-lg-8 ">
@@ -597,7 +598,7 @@
             </div>
           </div>
           <div class = 'col-lg-4'>
-            <p class = 'menu_description'>Aliquam et blandit mauris. Suspendisse tincidunt ullamcorper tortor eget blandit. Curabitur pellentesque justo mi, vel bibendum eros tempus non. Proin ut ex pretium, euismod tortor ac, luctus urna. Aenean hendrerit ornare tellus, in accumsan libero hendrerit nec. </p>
+            <p class = 'menu_description'><%= @plan5.description %></p>
             <!--<hr>-->
             <!--<ul class="item-details menu_description" >-->
               <!--<li>Nullam ullamcorper elit ac neque lacinia, ac facilisis lorem luctus.-->
@@ -612,14 +613,14 @@
               <!--</li>-->
             <!--</ul>-->
             <hr>
-            <h3> PHP <%= @plan5.price %> </h3>
+            <h3> PHP <%= @plan5.price %>.00 / day </h3>
             <br>
             <% if @user.billing_address.nil? %>
-              <a href="#billingSettings" class="btn btn-danger btn-block fa-lg" data-dismiss="modal">Setup Billing Address To Avail</a>
+              <a href="#billingSettings" class="btn btn-danger btn-block fa-lg billingSettings" data-dismiss="modal">Setup Billing Address To Avail</a>
             <% else %>
               <%= form_tag(users_avail_plan_path, method: :post) do %>
-                <%= hidden_field_tag('name', 'Friday Plan') %>
-                <%= hidden_field_tag('price', '400.00') %>
+                <%= hidden_field_tag('name', @plan5.name) %>
+                <%= hidden_field_tag('price', @plan5.price) %>
                 <h4 class="control-label text-danger">Start Date:</h4>
                 <input type="text" name="start_date" class="form-control" data-provide="datepicker" placeholder="MM/DD/YYYY" />
                 <h4 class="control-label text-danger">End Date:</h4>
@@ -646,7 +647,7 @@
         </div>
       </div>
       <div class="container">
-        <h2>Gains, bruh</h2>
+        <h2><%= @plan6.name %></h2>
         <hr class="star-primary">
         <div class="row">
           <div class="col-lg-8 ">
@@ -655,7 +656,7 @@
             </div>
           </div>
           <div class = 'col-lg-4'>
-            <p class = 'menu_description'>Aliquam et blandit mauris. Suspendisse tincidunt ullamcorper tortor eget blandit. Curabitur pellentesque justo mi, vel bibendum eros tempus non. Proin ut ex pretium, euismod tortor ac, luctus urna. Aenean hendrerit ornare tellus, in accumsan libero hendrerit nec. </p>
+            <p class = 'menu_description'><%= @plan6.description %></p>
             <!--<hr>-->
             <!--<ul class="item-details menu_description" >-->
               <!--<li>Nullam ullamcorper elit ac neque lacinia, ac facilisis lorem luctus.-->
@@ -670,14 +671,14 @@
               <!--</li>-->
             <!--</ul>-->
             <hr>
-            <h3> PHP <%= @plan6.price %> </h3>
+            <h3> PHP <%= @plan6.price %>.00 / day </h3>
             <br>
             <% if @user.billing_address.nil? %>
-              <a href="#billingSettings" class="btn btn-danger btn-block fa-lg" data-dismiss="modal">Setup Billing Address To Avail</a>
+              <a href="#billingSettings" class="btn btn-danger btn-block fa-lg billingSettings" data-dismiss="modal">Setup Billing Address To Avail</a>
             <% else %>
               <%= form_tag(users_avail_plan_path, method: :post) do %>
-                <%= hidden_field_tag('name', 'Weekend Plan') %>
-                <%= hidden_field_tag('price', '500.00') %>
+                <%= hidden_field_tag('name', @plan6.name) %>
+                <%= hidden_field_tag('price', @plan6.price) %>
                 <h4 class="control-label text-danger">Start Date:</h4>
                 <input type="text" name="start_date" class="form-control" data-provide="datepicker" placeholder="MM/DD/YYYY" />
                 <h4 class="control-label text-danger">End Date:</h4>

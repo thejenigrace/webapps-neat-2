@@ -90,9 +90,9 @@
             <%= image_tag('1.jpg', class: 'img-responsive') %>
             <div class="col-sm-14 portfolio-item text-center">
               <br>
-              <p><strong>Monday Plan</strong></p>
-              <p>Lorem ipsum dolor sit amet, has eu copiosae erroribus.</p>
-              <p>Price: P <%= @plan1.price %></p>
+              <p><strong><%= @plan1.name %></strong></p>
+              <p><%= @plan1.description %></p>
+              <p>P <%= @plan1.price %>.00 / day</p>
             </div>
           </a>
         </div>
@@ -106,9 +106,9 @@
             <%= image_tag('2.jpg', class: 'img-responsive') %>
             <div class="col-sm-14 portfolio-item text-center">
               <br>
-              <p><strong>Tuesday Plan</strong></p>
-              <p>Lorem ipsum dolor sit amet, has eu copiosae erroribus.</p>
-              <p>Price: P <%= @plan2.price %></p>
+              <p><strong><%= @plan2.name %></strong></p>
+              <p><%= @plan2.description %></p>
+              <p>P <%= @plan2.price %>.00 / day</p>
             </div>
           </a>
         </div>
@@ -122,9 +122,9 @@
             <%= image_tag('3.jpg', class: 'img-responsive') %>
             <div class="col-sm-14 portfolio-item text-center">
               <br>
-              <p><strong>Wednesday Plan</strong></p>
-              <p>Lorem ipsum dolor sit amet, has eu copiosae erroribus.</p>
-              <p>Price: P <%= @plan3.price %></p>
+              <p><strong><%= @plan3.name %></strong></p>
+              <p><%= @plan3.description %></p>
+              <p>P <%= @plan3.price %>.00 / day</p>
             </div>
           </a>
         </div>
@@ -138,9 +138,9 @@
             <%= image_tag('4.jpg', class: 'img-responsive') %>
             <div class="col-sm-14 portfolio-item text-center">
               <br>
-              <p><strong>Thursday Plan</strong></p>
-              <p>Lorem ipsum dolor sit amet, has eu copiosae erroribus.</p>
-              <p>Price: P <%= @plan4.price %></p>
+              <p><strong><%= @plan4.name %></strong></p>
+              <p><%= @plan4.description %></p>
+              <p>P <%= @plan4.price %>.00 / day</p>
             </div>
           </a>
         </div>
@@ -154,9 +154,9 @@
             <%= image_tag('5.jpg', class: 'img-responsive') %>
             <div class="col-sm-14 portfolio-item text-center">
               <br>
-              <p><strong>Friday Plan</strong></p>
-              <p>Lorem ipsum dolor sit amet, has eu copiosae erroribus.</p>
-              <p>Price: P <%= @plan5.price %></p>
+              <p><strong><%= @plan5.name %></strong></p>
+              <p><%= @plan5.description %></p>
+              <p>P <%= @plan5.price %>.00 / day</p>
             </div>
           </a>
         </div>
@@ -171,9 +171,9 @@
             <%= image_tag('6.jpg', class: 'img-responsive') %>
             <div class="col-sm-14 portfolio-item text-center">
               <br>
-              <p><strong>Weekend Plan</strong></p>
-              <p>Lorem ipsum dolor sit amet, has eu copiosae erroribus.</p>
-              <p>Price: P <%= @plan6.price %></p>
+              <p><strong><%= @plan6.name %></strong></p>
+              <p><%= @plan6.description %></p>
+              <p>P <%= @plan6.price %>.00 / day</p>
             </div>
           </a>
         </div>
@@ -316,14 +316,14 @@
         <div class="row">
           <div class="col-lg-8 col-lg-offset-2">
             <div class="modal-body">
-              <h2>Monday Plan</h2>
+              <h2><%= @plan1.name %></h2>
               <hr class="star-primary">
               <!--<img src="img/menu plan/1.jpg" class="img-responsive img-centered" alt="">-->
               <%= image_tag('1.jpg', class: 'img-responsive img-centered') %>
-              <p>Lorem ipsum dolor sit amet, ullum nemore indoctum cum ne, per eu eius sententiae delicatissimi, recteque laboramus delicatissimi mel ex. Cum case evertitur cu, mel summo eleifend salutatus et. Malis aeterno vituperata sea no. Partem molestie constituto vel ad, eum quot nominavi instructior ei. Falli legendos vel no. Dolorum cotidieque quo ex, ne malis ridens quo.</p>
+              <p><%= @plan1.description %></p>
               <ul class="list-inline item-details">
                 <li>Price:
-                  <strong>P <%= @plan1.price %>
+                  <strong>P <%= @plan1.price %>.00 / day
                   </strong>
                 </li>
                 <!--<li>Date:-->
@@ -354,14 +354,14 @@
         <div class="row">
           <div class="col-lg-8 col-lg-offset-2">
             <div class="modal-body">
-              <h2>Tuesday Plan</h2>
+              <h2><%= @plan2.name %></h2>
               <hr class="star-primary">
               <!--<img src="img/menu plan/2.jpg" class="img-responsive img-centered" alt="">-->
               <%= image_tag('2.jpg', class: 'img-responsive img-centered') %>
-              <p>Lorem ipsum dolor sit amet, ullum nemore indoctum cum ne, per eu eius sententiae delicatissimi, recteque laboramus delicatissimi mel ex. Cum case evertitur cu, mel summo eleifend salutatus et. Malis aeterno vituperata sea no. Partem molestie constituto vel ad, eum quot nominavi instructior ei. Falli legendos vel no. Dolorum cotidieque quo ex, ne malis ridens quo.</p>
+              <p><%= @plan2.description %></p>
               <ul class="list-inline item-details">
                 <li>Price:
-                  <strong>P <%= @plan2.price %>
+                  <strong>P <%= @plan2.price %>.00 / day
                   </strong>
                 </li>
                 <!--<li>Date:-->
@@ -392,14 +392,14 @@
         <div class="row">
           <div class="col-lg-8 col-lg-offset-2">
             <div class="modal-body">
-              <h2>Wednesday Plan</h2>
+              <h2><%= @plan3.name %></h2>
               <hr class="star-primary">
               <!--<img src="img/menu plan/3.jpg" class="img-responsive img-centered" alt="">-->
               <%= image_tag('3.jpg', class: 'img-responsive img-centered') %>
-              <p>Lorem ipsum dolor sit amet, ullum nemore indoctum cum ne, per eu eius sententiae delicatissimi, recteque laboramus delicatissimi mel ex. Cum case evertitur cu, mel summo eleifend salutatus et. Malis aeterno vituperata sea no. Partem molestie constituto vel ad, eum quot nominavi instructior ei. Falli legendos vel no. Dolorum cotidieque quo ex, ne malis ridens quo.</p>
+              <p><%= @plan3.description %></p>
               <ul class="list-inline item-details">
                 <li>Price:
-                  <strong>P <%= @plan3.price %>
+                  <strong>P <%= @plan3.price %>.00 / day
                   </strong>
                 </li>
                 <!--<li>Date:-->
@@ -430,14 +430,14 @@
         <div class="row">
           <div class="col-lg-8 col-lg-offset-2">
             <div class="modal-body">
-              <h2>Thursday Plan</h2>
+              <h2><%= @plan4.name %></h2>
               <hr class="star-primary">
               <!--<img src="img/menu plan/4.jpg" class="img-responsive img-centered" alt="">-->
               <%= image_tag('4.jpg', class: 'img-responsive img-centered') %>
-              <p>Lorem ipsum dolor sit amet, ullum nemore indoctum cum ne, per eu eius sententiae delicatissimi, recteque laboramus delicatissimi mel ex. Cum case evertitur cu, mel summo eleifend salutatus et. Malis aeterno vituperata sea no. Partem molestie constituto vel ad, eum quot nominavi instructior ei. Falli legendos vel no. Dolorum cotidieque quo ex, ne malis ridens quo.</p>
+              <p><%= @plan4.description %></p>
               <ul class="list-inline item-details">
                 <li>Price:
-                  <strong>P <%= @plan4.price %>
+                  <strong>P <%= @plan4.price %>.00 / day
                   </strong>
                 </li>
                 <!--<li>Date:-->
@@ -468,14 +468,14 @@
         <div class="row">
           <div class="col-lg-8 col-lg-offset-2">
             <div class="modal-body">
-              <h2>Friday Plan</h2>
+              <h2><%= @plan5.name %></h2>
               <hr class="star-primary">
               <!--<img src="img/menu plan/5.jpg" class="img-responsive img-centered" alt="">-->
               <%= image_tag('5.jpg', class: 'img-responsive img-centered') %>
-              <p>Lorem ipsum dolor sit amet, ullum nemore indoctum cum ne, per eu eius sententiae delicatissimi, recteque laboramus delicatissimi mel ex. Cum case evertitur cu, mel summo eleifend salutatus et. Malis aeterno vituperata sea no. Partem molestie constituto vel ad, eum quot nominavi instructior ei. Falli legendos vel no. Dolorum cotidieque quo ex, ne malis ridens quo.</p>
+              <p><%= @plan5.description %></p>
               <ul class="list-inline item-details">
                 <li>Price:
-                  <strong>P <%= @plan5.price %>
+                  <strong>P <%= @plan5.price %>.00 / day
                   </strong>
                 </li>
                 <!--<li>Date:-->
@@ -506,14 +506,14 @@
         <div class="row">
           <div class="col-lg-8 col-lg-offset-2">
             <div class="modal-body">
-              <h2>Weekend Plan</h2>
+              <h2><%= @plan6.name %></h2>
               <hr class="star-primary">
               <!--<img src="img/menu plan/6.jpg" class="img-responsive img-centered" alt="">-->
               <%= image_tag('6.jpg', class: 'img-responsive img-centered') %>
-              <p>Lorem ipsum dolor sit amet, ullum nemore indoctum cum ne, per eu eius sententiae delicatissimi, recteque laboramus delicatissimi mel ex. Cum case evertitur cu, mel summo eleifend salutatus et. Malis aeterno vituperata sea no. Partem molestie constituto vel ad, eum quot nominavi instructior ei. Falli legendos vel no. Dolorum cotidieque quo ex, ne malis ridens quo.</p>
+              <p><%= @plan6.description %></p>
               <ul class="list-inline item-details">
                 <li>Price:
-                  <strong>P <%= @plan6.price %>
+                  <strong>P <%= @plan6.price %>.00 / day
                   </strong>
                 </li>
                 <!--<li>Date:-->
