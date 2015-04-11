@@ -1,6 +1,12 @@
 source 'https://rubygems.org'
 
+gem 'bootstrap-datepicker-rails', '~> 1.4.0'
+
 gem 'font-awesome-sass', '~> 4.3.2.1'
+
+gem 'actionmailer', '~> 4.2.1'
+gem 'less-rails'
+gem 'therubyracer'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.1'
@@ -25,7 +31,7 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 
 # Use ActiveModel has_secure_password
-# gem 'bcrypt', '~> 3.1.7'
+gem 'bcrypt', '~> 3.1.7'
 
 # Use Unicorn as the app server
 # gem 'unicorn'

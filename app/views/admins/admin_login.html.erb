@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<!-- saved from url=(0040)http://getbootstrap.com/examples/signin/ -->
+<html lang="en">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        
+    <title>Admin Page</title>
+
+    <!-- Bootstrap core CSS -->
+   <!--  <link href="http://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet"> -->
+
+    <!-- Custom styles for this template -->
+    <link href="http://getbootstrap.com/examples/signin/signin.css" rel="stylesheet">
+   
+
+  </head>
+
+  <body>
+
+    <div class="container">
+
+    <%= form_tag(admins_admin_login_attempt_path, method: :post, :class => 'form-signin') do %>
+        <h2 class="form-signin-heading" style = 'text-align: center'>Admin Log in</h2>
+        <label for="inputEmail" class="sr-only">Username</label>
+        <input name = 'username' type="text" id="inputEmail" class="form-control" placeholder="Username" required="" autofocus="">
+        <label for="inputPassword" class="sr-only">Password</label>
+        <input name = 'passcode' type="password" id="inputPassword" class="form-control" placeholder="Password" required="">
+        <%= submit_tag('Log In', class: 'btn btn-block btn-primary') %>
+          
+    <% end %>
+
+    </div> <!-- /container -->
+  
+    </body>
+</html>

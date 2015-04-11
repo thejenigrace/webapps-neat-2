@@ -1,0 +1,22 @@
+<h1>
+  Hello <%= @user.name %>,
+  <br>
+</h1>
+
+<p>
+  Thank you for availing, <%= @plan.name %>!
+  <br>
+</p>
+
+<p>
+  <h4>You have availed for:</h4>
+  Name: <%= @plan.name %> <br>
+  Price: Php <%= @plan.price %> <br>
+  Valid from : <%= @transaction.start_date %> <br>
+  Valid until: <%= @transaction.end_date %> <br>
+</p>
+
+<p>If you do not have any transactions with NEAT, please ignore this email.</p>
+
+
+
