@@ -333,7 +333,13 @@
       <option name="project" value="LOCAL" />
       <updated>1428761320532</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="fix gemfile &amp; mailer">
+      <created>1428761351526</created>
+      <option name="number" value="00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1428761351526</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
