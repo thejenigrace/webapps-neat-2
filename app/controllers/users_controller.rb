@@ -6,7 +6,8 @@ class UsersController < ApplicationController
       @user = current_user
 
       if @user.email_confirmed
-        @my_transactions = Transaction.where(user_id: session[:user_id]).all
+        dateToday = Date.today.strftime('%m/%d/%Y')
+        @my_transactions = Transaction.where('end_date >= ?', dateToday).where(user_id: session[:user_id]).all
 
         @plan1 = Plan.where(id: 1).first
         @plan2 = Plan.where(id: 2).first
@@ -26,13 +27,19 @@ class UsersController < ApplicationController
     transaction.plan_id = current_user_plan(params[:name]).id
     transaction.start_date = params[:start_date]
     transaction.end_date = params[:end_date]
+    dateToday = Date.today.strftime('%m/%d/%Y')
 
     if(current_user.billing_address != nil)
-      # save transaction to the database
-      transaction.save
 
-      # deliver the avail plan confirmation email
-      UserMailer.avail_plan_confirmation(current_user, current_user_plan(params[:name]), transaction).deliver_now
+      if(transaction.start_date < dateToday || transaction.start_date > transaction.end_date)
+
+      else
+        # save transaction to the database
+        transaction.save
+
+        # deliver the avail plan confirmation email
+        UserMailer.avail_plan_confirmation(current_user, current_user_plan(params[:name]), transaction).deliver_now
+      end
     end
 
     redirect_to home_path
@@ -51,11 +58,17 @@ class UsersController < ApplicationController
   def edit_user_info
 
     if params[:new_name] != nil
-      current_user.update_column(:name, params[:new_name])
+      if(params[:new_name] != "")
+        current_user.update_column(:name, params[:new_name])
+      end
     end
 
     if params[:new_billing_address] != nil
-      current_user.update_column(:billing_address, params[:new_billing_address])
+      if(params[:new_billing_address] == "")
+        current_user.update_column(:billing_address, nil)
+      else
+        current_user.update_column(:billing_address, params[:new_billing_address])
+      end
     end
 
     redirect_to home_path
